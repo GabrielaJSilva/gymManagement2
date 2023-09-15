@@ -1,0 +1,47 @@
+<div class="titulo"> 
+    <h3>Alunos</h3>  
+    <div class="cardBase">
+     <p-table 
+     [value]="alunos" 
+     [paginator]="true"
+     [rows]="5"
+     [showCurrentPageReport]="true"
+     [tableStyle]="{'min-width': '50rem'}" 
+     styleClass="myTable" 
+     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+     [rowsPerPageOptions]="[5, 10, 25]">                            
+        <ng-template pTemplate="header">
+            <div class="botaoDeletar">
+                <p-button styleClass="p-button-danger" label="Deletar"></p-button>
+            </div>
+            <tr>
+                <th style="width: 1rem">
+                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                </th>                                
+                <th>Matrícula</th>
+                <th>Nome</th>
+                <th>Plano</th>
+                <th>Situação</th>
+                <th>Status de Pagamento</th>
+            </tr>                       
+        </ng-template>
+        <ng-template pTemplate="body" let-alunos>
+            <tr>
+                <td class="linhacheckbox">
+                    <p-tableCheckbox [value]="alunos"></p-tableCheckbox>
+                </td>                                
+                <td>{{ alunos.matricula }}</td>
+                <td>{{ alunos.nome }}</td>
+                <td>{{ alunos.plano }}</td>
+                <td>{{ alunos.situacao }}</td>
+                <td>{{ alunos.status }}</td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">           
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+        </ng-template>
+     </p-table>
+    </div>
+                 
+</div>

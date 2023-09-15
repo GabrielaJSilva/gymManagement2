@@ -1,0 +1,50 @@
+$background-color: #000000 !important;
+$font-color: #FCA311 !important;
+$font-color2: #fff !important;
+$font-family1: 'Roboto', sans-serif;
+$font-size1: 12pt;
+$font-sizeMenu: 16px;
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#item-1{
+    width: 350px;
+}
+.card{
+    margin-top: 10em;
+    margin-left: 6em;
+ }
+ .p-card .p-card-body{
+    color: $font-color;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    opacity: 0.80;   
+}
+.textoLogin{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2.5em;
+}
+.textoEmailSenha{
+    color: #ffffff;
+    margin-left: 6%;
+    text-align: left;
+    margin-top: 3em;
+}
+.Input1{
+    margin-top: 2em;
+    margin-left: 6%;
+    text-align: left;  
+}
+.Input2{
+    margin-top: 1.5em;
+    text-align: left;
+    margin-left: 6%;
+}
+.botao{
+    text-align: center;
+    margin-top: 3em;
+    opacity: 100;
+}

@@ -1,0 +1,96 @@
+$background-color: #000000 !important;
+$font-color: #FCA311 !important;
+$font-color2: #fff !important;
+$font-family1: 'Roboto', sans-serif;
+$font-size1: 12pt;
+$font-sizeMenu: 16px;
+
+.botaoDeletar{
+    position: absolute;
+    margin-left: 44.5em;
+}
+.p-button-text{
+    color: $font-color;
+}
+.titulo{
+    color: $font-color2;
+    text-align: left;
+    margin-top: 0em;
+    margin-left: 2em;
+    border: none;
+    height: 100%;
+}
+.p-datatable.myTable{
+    margin-top: 1em;
+    margin-right: 1em;
+    margin-bottom: 2em;
+    // border: #fff;
+}
+.p-datatable.myTable th{
+    background: rgb(0, 0, 0) ! important;
+    color: $font-color;
+}
+.p-datatable.myTable tr{
+    background: rgb(0, 0, 0) ! important;
+    color: $font-color2;
+}
+.cardBase{
+    margin-top: 1.5em;
+    margin-left: 0em; 
+    border: solid;
+    border-color: #ffffff; 
+    border-radius: 15px;
+    border-width: 2px;
+    height: 79%;
+//    margin-bottom: 5em;
+}
+.p-table.p-element{
+    border-color: #fff !important;
+}
+.p-paginator{
+    background-color: #000000;
+    font-size: 10pt;
+    color: #fff;
+    border: none;
+}
+.p-datatable .p-paginator-bottom{
+    border-width: 0;
+}
+.p-datatable .p-datatable-thead > tr > th {
+    padding: 2em 1em;
+}
+.p-checkbox .p-checkbox-box {
+
+    background: #000000;
+}
+.p-checkbox .p-checkbox-box.p-highlight {
+    border-color: #bcbcbc;
+    background: #000000;
+}
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+    border-color: #bcbcbc;
+    background: #000000;
+    color: #ffffff;
+}
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+    border-color: $font-color;
+}
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus{
+    border-color: #000000;
+}
+.p-paginator .p-paginator-last{
+    color: #fff;
+}
+.p-paginator .p-paginator-next{
+    color: #fff;
+}
+.p-paginator .p-paginator-prev{
+    color: #fff;
+}
+.p-paginator .p-paginator-pages .p-paginator-page {
+    color: #fff;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    color: $font-color;
+    font-weight: bold;
+}

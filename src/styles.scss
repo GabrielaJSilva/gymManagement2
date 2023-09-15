@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+@import "primeicons/primeicons.css";
+$background-color: #000000 !important;
+$font-color: #FCA311 !important;
+$font-color2: #fff !important;
+$font-family1: 'Roboto', sans-serif;
+
+body{
+    height: 100%;
+    background: url(./assets/background.jpg) center center no-repeat fixed;  
+    background-size: cover; /*Css padrão*/
+   -webkit-background-size: cover; /*Css safari e chrome*/
+   -moz-background-size: cover; /*Css firefox*/
+   -ms-background-size: cover; /*Css IE não use mer#^@%#*/
+   -o-background-size: cover; /*Css Opera*/
+    font-family: 'Roboto', sans-serif;
+}
+.p-card{
+    background-color: $background-color;
+    color: $font-color;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 15px;
+    opacity: 0.80;   
+}
+.p-button{
+    background-color: #9E9494;
+    border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: $font-color2;
+    width: 90px;
+    height: 30px;
+    opacity: 100;
+}
+.text-center{
+    text-align: center;
+}
+.text-left{
+    text-align: left;
+}
+input::placeholder{
+    font-weight: bold;
+    background-color: #000000;    
+}
+.p-inputtext{
+    width: 285px;
+    border-radius: 15px;    
+}

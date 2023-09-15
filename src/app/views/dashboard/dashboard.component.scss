@@ -1,0 +1,172 @@
+$background-color: #000000 !important;
+$font-color: #FCA311 !important;
+$font-color2: #fff !important;
+$font-family1: 'Roboto', sans-serif;
+$font-size1: 12pt;
+$font-sizeMenu: 16px;
+.container{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+.menu-container{
+    display: flex;
+    justify-content: left;  
+    opacity: 0.92;
+    border-radius: 15px;
+    margin-left: 0em;
+    background-color: black;
+    height: 100%;
+    min-width: 200px;
+    width: 200px;
+}
+.base-container{
+    display: flex;
+    position: relative;
+    float: right;
+    height: 100%;
+    width: 1000px;
+    background-color: rgb(0, 0, 0);
+    opacity: 0.92;
+    border-radius: 15px;
+    margin-left: 3em;    
+    margin-top: 0;
+}
+.menucus {
+    background-color: transparent;
+    border-color: transparent;   
+    height: 100%;
+    margin-top: 4em;           
+}
+.menucus ul li:nth-child(1) {
+    margin-top: 0em;   
+}
+.menucus ul li:nth-child(6) {
+    margin-top: 15em;
+}    
+.p-menuitem{
+    font-weight: bold;
+    font-family: $font-family1;
+}
+.p-menuitem-link:not(.p-disable):hover{
+    background-color: #595959 !important;
+}
+.p-menuitem-text{   
+    color: #fff ! important;
+    font-size: $font-sizeMenu;
+}
+.p-menu-separator{
+    border-top: 2.5px solid #FCA311! important;
+    margin-left: 0%;
+    margin-top: 5em;
+}
+.p-tieredmenu .p-menu-separator {
+    border-top: 1px solid #dee2e6;
+    margin: 4rem 0;
+}
+.iconeSair{
+    margin-top: 45.5em;
+    margin-left: -10em;
+}
+.p-button-text{
+    color: $font-color;
+}
+.textoFooter{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 45em;
+    margin-left: 0.6em;
+    position: relative;
+}
+.tituloMenu{
+    color: $font-color;
+    text-align: center;
+    margin-top: 0em;
+    margin-left: 1.3em;
+    position: absolute;
+    border: none;
+    font-size: 18px;
+    font-weight: bold; 
+}
+.titulo{
+    color: $font-color2;
+    text-align: left;
+    margin-top: 0em;
+    margin-left: 2em;
+    border: none;
+    height: 100%;
+}
+
+.p-datatable.myTable{
+    margin-top: 3em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+}
+.p-datatable.myTable th{
+    background: rgb(0, 0, 0) ! important;
+    color: $font-color;
+}
+.p-datatable.myTable tr{
+    background: rgb(0, 0, 0) ! important;
+    color: $font-color2;
+}
+.cardBase{
+    margin-left: -2em;  
+}
+.p-table.p-element{
+    border-color: #fff !important;
+}
+.p-paginator{
+    background-color: #000000;
+    font-size: 10pt;
+    color: #fff;
+    border: none;
+}
+.p-datatable .p-paginator-bottom{
+    border-width: 0;
+}
+.p-datatable .p-datatable-thead > tr > th {
+    padding: 2em 1em;
+}
+.p-checkbox .p-checkbox-box {
+
+    background: #000000;
+}
+.p-checkbox .p-checkbox-box.p-highlight {
+    border-color: #bcbcbc;
+    background: #000000;
+}
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+    border-color: #bcbcbc;
+    background: #000000;
+    color: #ffffff;
+}
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box:hover {
+    border-color: $font-color;
+}
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-focus{
+    border-color: #000000;
+}
+.p-paginator .p-paginator-last{
+    color: #fff;
+}
+.p-paginator .p-paginator-next{
+    color: #fff;
+}
+.p-paginator .p-paginator-prev{
+    color: #fff;
+}
+.p-paginator .p-paginator-pages .p-paginator-page {
+    color: #fff;
+}
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+    color: $font-color;
+    font-weight: bold;
+}
+// .p-card .p-card-body {
+//     border-color: #fff !important; 
+//     border-radius: 15px;
+//     background-color: white !important;
+// }
