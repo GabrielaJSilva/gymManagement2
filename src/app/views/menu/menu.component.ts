@@ -44,12 +44,16 @@ export class MenusComponent implements OnInit{
     ];
 
   }
-    abrirProfessores(){
-      this.router.navigateByUrl('dashboard/tela-professores');
-    }
     abrirDashboard(){
       this.router.navigateByUrl('dashboard');
     }
+    abrirProfessores(){
+      this.router.navigateByUrl('dashboard/tela-professores');
+    }
+    abrirPlanos(){
+      this.router.navigateByUrl('dashboard/tela-planos');
+    }
+
     abrirCadastro(){
       this.router.navigateByUrl('dashboard/tela-cadastro');
     }
@@ -59,7 +63,5 @@ export class MenusComponent implements OnInit{
     deslogar(){
       this.router.navigate(['login']);
     }
-    abrirPlanos(){
-      this.router.navigateByUrl('dashboard/tela-planos');
-    }
+
 }

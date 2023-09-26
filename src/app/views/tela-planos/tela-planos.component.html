@@ -1,13 +1,46 @@
 <div class="container">
-    <app-menu> </app-menu>  
- <div class="base-container"> 
-     <div class="titulo">
-         <h3> Planos </h3>
-         <p-card class="planoCard" >
-             <h5> Plano Ouro </h5>
-             <h5> 99-9999-9999</h5>
-         </p-card>
-         
-     </div>
- </div>
-</div>
+    <app-menu> </app-menu>
+    <div class="base-container">
+        <div class="titulo">
+            <h3> Planos </h3>
+            <div class="botaoCadastrar">
+                <p-button (click)="cadastrarPlano()" styleClass="p-button-rounded p-button-warning p-button-sm" 
+                    label="Cadastrar">
+                </p-button>
+            </div>
+            <div class="plano-container">
+                <ng-container>
+                        <app-plano-card></app-plano-card>
+                        <app-plano-card></app-plano-card>
+                        <app-plano-card></app-plano-card>
+                        <app-plano-card></app-plano-card>
+                        <app-plano-card></app-plano-card>
+                        <app-plano-card></app-plano-card>
+                        <p-dialog header="Cadastrar Plano" [(visible)]="visible"
+                            [style]="{width: '28vw', height:'30vw'}">
+
+                            <div class="InputPlano">
+                                <div>
+                                    <label htmlFor="celular">Plano</label>
+                                    <input pInputText id="celular" />
+
+                                </div>
+                            </div>
+                            <div class="InputHorario">
+                                <div>
+                                    <label htmlFor="redeSocial">Horário</label>
+                                    <input pInputText id="redeSocial" />
+
+                                </div>
+                            </div>
+
+                            <div class="botaoSalvar">
+                                <p-button styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
+                            </div>
+                        </p-dialog>
+                    
+                </ng-container>
+                <div>
+                </div>
+            </div>
+        </div>

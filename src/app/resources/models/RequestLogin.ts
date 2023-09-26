@@ -1,4 +1,4 @@
-export class RequestLogin{
+export class RequestLogin {
     public login!: string;
     public password!: StringConstructor;
 }

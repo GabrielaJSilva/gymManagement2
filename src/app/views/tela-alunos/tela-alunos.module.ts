@@ -9,12 +9,11 @@ import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 import { TelaAlunosComponent } from './tela-alunos.component';
-
+import { DialogModule } from 'primeng/dialog';
 @NgModule({
   declarations: [TelaAlunosComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
-    //DashboardRoutingModule,
     CardModule,
     TieredMenuModule,
     DividerModule,
@@ -23,7 +22,8 @@ import { TelaAlunosComponent } from './tela-alunos.component';
     CheckboxModule,
     CommonModule,
     FormsModule,
-    MenuModule
+    MenuModule,
+    DialogModule
   ],
   exports: [TelaAlunosComponent]
 })

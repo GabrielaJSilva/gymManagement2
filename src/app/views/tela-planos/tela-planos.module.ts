@@ -5,11 +5,13 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
-import { CheckboxModule } from 'primeng/checkbox';
+//import { CheckboxModule } from 'primeng/checkbox';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+//import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
-
+import { DialogModule } from 'primeng/dialog';
+import { InputTextModule } from 'primeng/inputtext';
+import { PlanoCardModule } from '../plano-card/plano-card.module';
 @NgModule({
   declarations: [ TelaPlanosComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
@@ -19,10 +21,14 @@ import { MenuModule } from 'src/app/views/menu/menu.module';
     DividerModule,
     TableModule,
     ButtonModule,
-    CheckboxModule,
+//    CheckboxModule,
     CommonModule,
-    FormsModule,    
+//    FormsModule,    
     MenuModule,
+    DialogModule,
+    InputTextModule,
+    PlanoCardModule,
+
   ]
 })
 export class TelaPlanosModule { }

@@ -1158,4 +1158,11 @@ export class AlunosService {
     getProductsWithOrders() {
         return Promise.resolve(this.getProductsWithOrdersData());
     }
+    //criando metodo para deletar o aluno 
+    //remove: alunos => {
+    //     return callApi({
+    //         method: "DELETE",
+    //         url: "http://manangment-gym-production.up.railway.app/teacher/${alunos.uid}"
+    //     })
+    //}
 };

@@ -1,5 +1,5 @@
 <div class="container">
-    <div id="item-1">
+    <div id="item-login">
         <p-card class="card">
             <div class="text-center">
                 <div style="padding-top: 1em"> 
@@ -11,14 +11,26 @@
                 <div class="textoEmailSenha"> 
                     <h5>Digite e-mail e senha para entrar:</h5>
                 </div>
-                <div class="Input1">
-                    <input style="border: none" [(ngModel)]="requestLogin.login" type="text" pInputText placeholder="e-mail"/> 
+                <div class="InputEmail">
+                    <input 
+                    style="border: none" 
+                    [(ngModel)]="requestLogin.login" 
+                    type="text" 
+                    pInputText 
+                    placeholder="e-mail"/> 
                 </div>
-                <div class="Input2" >
-                    <input style="border: none" [(ngModel)]="requestLogin.password" type="password" pInputText  placeholder="senha"/> 
+                <div class="InputSenha">
+                    <input style="border: none" 
+                    [(ngModel)]="requestLogin.password" 
+                    type="password" 
+                    pInputText  
+                    placeholder="senha"/> 
                 </div>
-                <div class="botao" >
-                    <p-button (click)="doLogin()" styleClass="p-button-rounded p-button-warning" label="Entrar"> </p-button>  
+                <div class="botao">
+                    <p-button 
+                    (click)="doLogin()" 
+                    styleClass="p-button-rounded p-button-warning" 
+                    label="Entrar"> </p-button>  
                 </div>
             </div>
         </p-card>

@@ -18,8 +18,8 @@ $font-sizeMenu: 16px;
     margin-left: 0em;
     background-color: black;
     height: 100%;
-    min-width: 200px;
     width: 200px;
+    min-width: 200px;
 }
 .base-container{
     display: flex;
@@ -30,8 +30,15 @@ $font-sizeMenu: 16px;
     background-color: rgb(0, 0, 0);
     opacity: 0.92;
     border-radius: 15px;
-    margin-left: 3em;    
+    margin-left: 3em;  
     margin-top: 0;
+}
+.prof-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   
 }
 .menucus {
     background-color: transparent;
@@ -93,10 +100,11 @@ $font-sizeMenu: 16px;
 .titulo{
     color: $font-color2;
     text-align: left;
-    margin-top: 0em;
-    margin-left: 2em;
     border: none;
+    margin-left: 2em;
+    margin-top: 0;
     height: 100%;
+    
 }
 .profCard {
     .p-card-body{
@@ -108,4 +116,39 @@ $font-sizeMenu: 16px;
         color: $font-color2;
     }
 }
-
+.botaoCadastrar{
+    text-align: center;
+    position: relative;
+    margin-top: -2em;
+    margin-left: 50em;
+    opacity: 100;
+}
+.InputNome{
+    margin-top: 2em;
+    margin-left: 6%;
+    text-align: left;  
+}
+.InputCelular{
+    margin-top: 1.5em;
+    text-align: left;
+    margin-left: 6%;
+}
+.InputRedeSocial{
+    margin-top: 1.5em;
+    text-align: left;
+    margin-left: 6%;
+}
+.botaoSalvar{
+    text-align: center;
+    margin-top: 3em;
+}
+.cardBase{
+    margin-top: 1.5em;
+    margin-left: 0em; 
+    border: solid;
+    border-color: #ffffff; 
+    border-radius: 15px;
+    border-width: 2px;
+    height: 79%;
+    min-height: 500px;
+}

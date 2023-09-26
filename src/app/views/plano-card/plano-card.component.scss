@@ -1,0 +1,15 @@
+$font-color: #FCA311 !important;
+$font-color2: #fff !important;
+.planoCard {
+    .p-card-body{
+        background-color: rgba(255, 255, 255, 0) !important;
+        border: solid;
+        border-color: #ffffff;
+        border-radius: 25px;
+        border-width: 1px;
+        color: $font-color2;
+        margin: 3%;
+        text-align: center;
+        //align-content: center;
+    }
+}

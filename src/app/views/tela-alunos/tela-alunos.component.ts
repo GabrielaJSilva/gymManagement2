@@ -9,11 +9,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./tela-alunos.component.scss']
 })
 export class TelaAlunosComponent {
-
   alunos!: Alunos [];
   selectedAluno!: Alunos;
+  visible: boolean = false;
+  deletarAluno(){
+    this.visible = true;
+  }
   constructor(
-
     private alunosService: AlunosService,
     private router: Router,
     ) {}
@@ -24,8 +26,5 @@ export class TelaAlunosComponent {
     });
     
 }
-    // navegarProf(){
-    //   this.router.navigate(['tela-professores'])
-    // }
 }
 

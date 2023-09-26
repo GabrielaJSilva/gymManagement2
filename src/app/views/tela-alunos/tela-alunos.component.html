@@ -12,7 +12,7 @@
      [rowsPerPageOptions]="[5, 10, 25]">                            
         <ng-template pTemplate="header">
             <div class="botaoDeletar">
-                <p-button styleClass="p-button-danger" label="Deletar"></p-button>
+                <p-button (onClick)="deletarAluno()" styleClass="p-button-danger" label="Deletar"></p-button>
             </div>
             <tr>
                 <th style="width: 1rem">
@@ -42,6 +42,14 @@
         <ng-template pTemplate="paginatorright">
         </ng-template>
      </p-table>
+     <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
+        <p>
+            Deseja deletar os alunos selecionados?
+        </p>
+        <div class="botaoConfirmar">
+            <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Confirmar"> </p-button>
+        </div>
+    </p-dialog>
     </div>
                  
 </div>

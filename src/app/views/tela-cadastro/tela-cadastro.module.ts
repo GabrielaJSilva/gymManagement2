@@ -5,9 +5,9 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
-import { CheckboxModule } from 'primeng/checkbox';
+//import { CheckboxModule } from 'primeng/checkbox';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+//import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 
 @NgModule({
@@ -19,9 +19,9 @@ import { MenuModule } from 'src/app/views/menu/menu.module';
     DividerModule,
     TableModule,
     ButtonModule,
-    CheckboxModule,
+//    CheckboxModule,
     CommonModule,
-    FormsModule,    
+ //   FormsModule,    
     MenuModule,
   ]
 })
