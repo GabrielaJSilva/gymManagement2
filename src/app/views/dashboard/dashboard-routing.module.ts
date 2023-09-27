@@ -6,6 +6,7 @@ import { TelaAlunosComponent } from '../tela-alunos/tela-alunos.component';
 import { TelaPlanosComponent } from '../tela-planos/tela-planos.component';
 import { TelaFinanceiroComponent } from '../tela-financeiro/tela-financeiro.component';
 import { TelaCadastroComponent } from '../tela-cadastro/tela-cadastro.component';
+import { TelaDetalheAlunoComponent } from '../tela-detalhe-aluno/tela-detalhe-aluno.component';
 const routes: Routes = [
   {path: '', component:DashboardComponent },
   {path: 'tela-alunos', component: TelaAlunosComponent },

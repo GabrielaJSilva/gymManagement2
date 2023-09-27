@@ -3,7 +3,7 @@ import { CardModule } from 'primeng/card';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { DividerModule } from 'primeng/divider';
 import { ButtonModule } from 'primeng/button';
-import  {CommonModule} from '@angular/common'
+import { CommonModule } from '@angular/common'
 import { MenusComponent } from './menu.component';
 
 @NgModule({

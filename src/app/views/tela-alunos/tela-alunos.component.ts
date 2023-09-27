@@ -24,7 +24,8 @@ export class TelaAlunosComponent {
     this.alunosService.getAlunosMini().then((data: Alunos[]) => {
       this.alunos = data;
     });
-    
+  
 }
+
 }
 

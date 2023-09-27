@@ -1,17 +1,17 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { TelaPlanosComponent } from './tela-planos.component';
+import { NgModule,  CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
 import { TieredMenuModule } from 'primeng/tieredmenu';
 import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
-import { CommonModule } from '@angular/common';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { PlanoCardModule } from '../plano-card/plano-card.module';
+import { TelaDetalheAlunoComponent } from './tela-detalhe-aluno.component';
 @NgModule({
-  declarations: [ TelaPlanosComponent ],
+  declarations: [ TelaDetalheAlunoComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
     CardModule,
@@ -19,9 +19,7 @@ import { PlanoCardModule } from '../plano-card/plano-card.module';
     DividerModule,
     TableModule,
     ButtonModule,
-//    CheckboxModule,
-    CommonModule,
-//    FormsModule,    
+    CommonModule,   
     MenuModule,
     DialogModule,
     InputTextModule,
@@ -29,4 +27,4 @@ import { PlanoCardModule } from '../plano-card/plano-card.module';
 
   ]
 })
-export class TelaPlanosModule { }
+export class TelaDetalheAlunoModule { }

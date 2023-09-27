@@ -4,7 +4,13 @@ $font-color2: #fff !important;
 $font-family1: 'Roboto', sans-serif;
 $font-size1: 12pt;
 $font-sizeMenu: 16px;
-
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
 .menu-container{
     display: flex;
     justify-content: left;  
