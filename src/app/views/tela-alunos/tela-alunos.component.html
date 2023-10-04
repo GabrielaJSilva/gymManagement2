@@ -26,6 +26,7 @@
             </tr>                       
         </ng-template>
         <ng-template pTemplate="body" let-alunos>
+        
             <tr>
                 <td class="linhacheckbox">
                     <p-tableCheckbox [value]="alunos"></p-tableCheckbox>
@@ -36,6 +37,7 @@
                 <td>{{ alunos.situacao }}</td>
                 <td>{{ alunos.status }}</td>
             </tr>
+
         </ng-template>
         <ng-template pTemplate="paginatorleft">           
         </ng-template>

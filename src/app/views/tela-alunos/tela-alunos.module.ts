@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 import { TelaAlunosComponent } from './tela-alunos.component';
 import { DialogModule } from 'primeng/dialog';
+import { ScrollerModule } from 'primeng/scroller';
+
 @NgModule({
   declarations: [TelaAlunosComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
@@ -23,7 +25,8 @@ import { DialogModule } from 'primeng/dialog';
     CommonModule,
     FormsModule,
     MenuModule,
-    DialogModule
+    DialogModule,
+    ScrollerModule
   ],
   exports: [TelaAlunosComponent]
 })

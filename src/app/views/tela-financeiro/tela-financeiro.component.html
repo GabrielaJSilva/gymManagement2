@@ -1,11 +1,74 @@
 <div class="container">
-    <app-menu> </app-menu>  
- <div class="base-container"> 
-     <div class="titulo">
-         <h3> Financeiro </h3>
-            <div>
+    <app-menu> </app-menu>
+    <div class="base-container">
+        <div class="titulo">
+            <h3> Financeiro </h3>
+            <div class="fin-container">
+                <div>Atrasados</div>
+                <div>Vencendo hoje</div>
+                <div>A vencer</div>
             </div>
-         
-     </div>
- </div>
+            <div class="fin-container">
+                <div>R$ 00000,00</div>
+                <div>R$ 00000,00</div>
+                <div>R$ 00000,00</div>
+            </div>
+            <div class="cardBaseU" style="overflow-y: scroll; height: 100px;" >
+                <p-table 
+                [value]="alunos"        
+                [rows]="5"          
+                [tableStyle]="{'min-width': '50rem'}" 
+                styleClass="myTable"
+                >                            
+                   <ng-template pTemplate="header">
+                       <tr>
+                           <th>Nome</th>
+                           <th>Status</th>
+                           <th>Situação</th>
+                           <th></th>
+                           <th></th>
+                       </tr>                       
+                   </ng-template>
+                   <ng-template pTemplate="body" let-alunos>        
+                       <tr>                               
+                           <td>{{ alunos.nome }}</td>
+                           <td>{{ alunos.status }}</td>
+                           <td>{{ alunos.situacao }}</td>
+                           <td>
+                            <div class="botaoEnviar">
+                                <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Enviar">
+                                </p-button>
+                            </div>
+                           </td>
+                           <td>
+                            <div class="botaoPagar">
+                                <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Pagar">
+                                </p-button>
+                            </div>
+                           </td>
+                       </tr>
+           
+                   </ng-template>
+                   
+                </p-table>
+            </div>
+            <div class="cardBaseD">
+                <div class="tituloGR"> Gerar Relatório </div>
+                <div class="per-container">
+                    <div>Período inicial</div>
+                    <div>Período final</div>
+                    <div></div>                   
+                </div>
+                <div class="per-container">
+                    <div>colocar o periodo</div>
+                    <div>colocar o periodo</div>
+                    <div class="xxxx">
+                        <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Buscar">
+                        </p-button>
+                    </div>                   
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
