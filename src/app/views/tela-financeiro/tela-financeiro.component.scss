@@ -45,6 +45,23 @@ $font-sizeMenu: 16px;
     justify-content: space-between;
    
 }
+.fin-container2{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    width: 60%;
+    min-width: 740px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    :nth-child(2){
+        margin-right: 1.8em;
+    }
+    :nth-child(3){
+        margin-right: -1.6em;
+    }
+   
+}
+
 .per-container{
     display: flex;
     flex-direction: row;
@@ -57,7 +74,7 @@ $font-sizeMenu: 16px;
     margin-top: 1em;
 }
 .cardBaseU{
-    margin-top: 3em;
+    margin-top: 1em;
     margin-left: 0.1em; 
     border: solid;
     border-color: #ffffff; 
@@ -78,6 +95,9 @@ $font-sizeMenu: 16px;
     width: 110%;
     height: 100%;
     min-height: 200px;
+}
+.p-input-icon-left{
+    margin-top: 1em;
 }
 .menucus {
     background-color: transparent;
@@ -188,6 +208,9 @@ $font-sizeMenu: 16px;
     }
     .p-datatable .p-datatable-thead > tr > th {
         padding: 0.09em 1em;
+    }
+    .p-datatable-table {
+        margin-left: 1em;
     }
 }
 .p-checkbox .p-checkbox-box {
