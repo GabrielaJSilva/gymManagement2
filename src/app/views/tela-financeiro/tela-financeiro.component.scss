@@ -104,6 +104,11 @@ $font-sizeMenu: 16px;
     height: 100%;
     max-height: 200px;
     min-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;    
+}
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
 }
 .cardBaseD{
     margin-top: 1.5em;
@@ -220,18 +225,22 @@ $font-sizeMenu: 16px;
 }
 
 .tableFin{
+
     .p-datatable .p-datatable-tbody > tr > td {
         text-align: left;
         border: 1px solid #dee2e6;
         border-width: 0 0 1px 0;
         padding: 0.1rem 0.1rem;
+        // margin-left: 1em; nao funciona
+        
     }
     .p-datatable .p-datatable-thead > tr > th {
         padding: 0.09em 1em;
     }
-    .p-datatable-table {
-        margin-left: 1em;
-    }
+    //margem para a lista de alunos
+    // .p-datatable-table {
+    //     margin-left: 0.3em;
+    // }
 }
 // .treetableDate .ui-widget-content{
 //     width: 30%; // or in pixel depends how much width you want.

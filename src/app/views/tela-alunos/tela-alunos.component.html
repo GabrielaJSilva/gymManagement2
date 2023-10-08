@@ -4,15 +4,25 @@
      <p-table 
      [value]="alunos" 
      [paginator]="true"
-     [rows]="5"
+     [rows]="10"
      [showCurrentPageReport]="true"
      [tableStyle]="{'min-width': '50rem'}" 
      styleClass="myTable" 
      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
      [rowsPerPageOptions]="[5, 10, 25]">                            
-        <ng-template pTemplate="header">
-            <div class="botaoDeletar">
-                <p-button (onClick)="deletarAluno()" styleClass="p-button-danger" label="Deletar"></p-button>
+  
+     <ng-template pTemplate="header">
+        
+            <div class="searchEdeletar">
+                <div class="inputSearch">
+                    <span class="p-input-icon-left">
+                        <i class="pi pi-search"></i>
+                        <input type="text" class="p-inputtext-sm" pInputText [(ngModel)]="value1" />
+                    </span>
+                </div>
+                <div class="botaoDeletar">
+                    <p-button (onClick)="deletarAluno()" styleClass="p-button-danger" label="Deletar"></p-button>
+                </div>
             </div>
             <tr>
                 <th style="width: 1rem">

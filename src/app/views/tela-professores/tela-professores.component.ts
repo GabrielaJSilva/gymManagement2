@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
-
+import { Professores } from 'src/app/resources/domain/professores';
+import { AddProfessor } from 'src/app/resources/models/AddProfessor';
+import { ProfessoresService } from 'src/app/resources/services/professores.service';
 @Component({
   selector: 'app-tela-professores',
   templateUrl: './tela-professores.component.html',
@@ -8,17 +10,31 @@ import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
 })
 export class TelaProfessoresComponent implements OnInit {
   visible: boolean = false;
+  professores!: Professores [];
+  selectedProfessor!: Professores;
+  public addProfessor: AddProfessor = new AddProfessor;
+
   cadastrarProf(){
     this.visible = true;
   }
   constructor(
+    private professoresService: ProfessoresService,
+
     ) {}
-  ngOnInit() {} 
+  ngOnInit(): void { 
+    this.addProfessor = new AddProfessor();
+}
   //Não esquecer de iniciar o metodo get professor
   //this.getProfessores();
-}
-//cadastrarProf()
-//escrever aqui o metodo get professores
+
+public doProf(): void{
+  //para ver o objeto no console
+  //console.log(this.addProfessor);
+
+  //fazendo a chamada no serviço
+  this.professoresService.addProfessor(this.addProfessor)
+}}
+
 //getProfessores(){
 //  this.professoresService...
 //}

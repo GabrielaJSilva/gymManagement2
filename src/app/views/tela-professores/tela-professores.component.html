@@ -17,35 +17,36 @@
 
                   
                 </ng-container>
-            </div>
-
             <p-dialog header="Cadastrar Professor" [(visible)]="visible" [style]="{width: '28vw', height:'36vw' }">
                 <div class="InputNome">
                     <div>
                         <label htmlFor="username">Nome</label>
-                        <input pInputText id="username" />
+                        <input [(ngModel)]="addProfessor.name" pInputText id="username" />
 
                     </div>
                 </div>
                 <div class="InputCelular">
                     <div>
                         <label htmlFor="celular">Celular</label>
-                        <input pInputText id="celular" />
+                        <input [(ngModel)]="addProfessor.numberPhone" pInputText id="celular" />
 
                     </div>
                 </div>
                 <div class="InputRedeSocial">
                     <div>
                         <label htmlFor="redeSocial">Rede Social</label>
-                        <input pInputText id="redeSocial" />
+                        <input [(ngModel)]="addProfessor.socialNetwork" pInputText id="redeSocial" />
 
                     </div>
                 </div>
 
                 <div class="botaoSalvar">
-                    <p-button styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
+                    <p-button (click)="doProf()" styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
                 </div>
             </p-dialog>
+            </div>
+
+
         </div>
     </div>
 </div>

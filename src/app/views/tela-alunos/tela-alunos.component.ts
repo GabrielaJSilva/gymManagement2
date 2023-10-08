@@ -12,6 +12,7 @@ export class TelaAlunosComponent {
   alunos!: Alunos [];
   selectedAluno!: Alunos;
   visible: boolean = false;
+  value1: string | undefined;
   deletarAluno(){
     this.visible = true;
   }
@@ -23,6 +24,7 @@ export class TelaAlunosComponent {
     
     this.alunosService.getAlunosMini().then((data: Alunos[]) => {
       this.alunos = data;
+      
     });
   
 }

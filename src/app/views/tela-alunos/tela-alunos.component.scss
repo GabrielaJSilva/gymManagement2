@@ -11,10 +11,7 @@ $font-sizeMenu: 16px;
     height: 100%;
     width: 100%;
 }
-.botaoDeletar{
-    position: absolute;
-    margin-left: 44.5em;
-}
+
 .p-button-text{
     color: $font-color;
 }
@@ -48,7 +45,23 @@ $font-sizeMenu: 16px;
     border-width: 2px;
     height: 79%;
     min-height: 500px;
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;   
 }
+.searchEdeletar{
+    position: absolute;
+    margin-left: 2em;
+}
+.inputSearch{
+    margin-left: -1em;
+    margin-top: -1em;
+}
+.botaoDeletar{
+    margin-left: 42em;
+    margin-top: -2em;
+}
+
 .p-table.p-element{
     border-color: #fff !important;
 }

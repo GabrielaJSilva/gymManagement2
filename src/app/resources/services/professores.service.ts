@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
+import { AddProfessor } from '../models/AddProfessor';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProfessoresService {
-  getProfessoresData() {
-    return [
-        {
-            nome: 'Frederico da Silva',
-            Telefone: 'aaaaa',              
-        },]}
-  constructor() { }
+  
+  constructor(private httpClient: HttpClient) {}
+  public addProfessor(addProfessor: AddProfessor){
+    return this.httpClient.post('http://manangment-gym-production.up.railway.app/teacher', addProfessor);
+  }
+
 }

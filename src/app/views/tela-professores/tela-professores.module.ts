@@ -10,7 +10,8 @@ import { MenuModule } from 'src/app/views/menu/menu.module';
 import { ProfCardModule } from '../prof-card/prof-card.module';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
-
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [TelaProfessoresComponent],
@@ -25,7 +26,9 @@ import { InputTextModule } from 'primeng/inputtext';
     MenuModule,  
     ProfCardModule,
     DialogModule,
-    InputTextModule
+    InputTextModule,
+    FormsModule,
+    HttpClientModule
   ]
 
 })

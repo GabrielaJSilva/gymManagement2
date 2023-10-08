@@ -1,5 +1,6 @@
-import { Component, ViewEncapsulation  } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
 import { Professores } from 'src/app/resources/domain/professores';
+import { AddProfessor } from 'src/app/resources/models/AddProfessor';
 import { ProfessoresService } from 'src/app/resources/services/professores.service';
 @Component({
   selector: 'app-prof-card',
@@ -7,16 +8,18 @@ import { ProfessoresService } from 'src/app/resources/services/professores.servi
   styleUrls: ['./prof-card.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class ProfCardComponent {
+export class ProfCardComponent implements OnInit {
   professores!: Professores [];
   selectedProfessor!: Professores;
+  public addProfessor: AddProfessor | undefined;
+
   constructor(
     private professoresService: ProfessoresService,
- //   private router: Router,
+
     ) {}
-  ngOnInit() {
-    
-     this.professores = this.professoresService.getProfessoresData();
+  ngOnInit(): void {
+     this.addProfessor = new AddProfessor();
+     //this.professores = this.professoresService.getProfessoresData();
       
      };
     
