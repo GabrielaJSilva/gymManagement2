@@ -14,6 +14,7 @@ export class TelaFinanceiroComponent implements OnInit{
   visible: boolean = false;
   date: Date | undefined;
   value: string | undefined;
+  date1: Date | undefined;
 
   constructor(
     private alunosService: AlunosService,

@@ -65,11 +65,15 @@
                     <div>Período final</div>
                     <div></div>                   
                 </div>
-                <div class="per-container">
-                    <div>Período inicial</div>
-                    <div>Período final</div>
-                    <div class="xxxx">
-                        <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Buscar">
+                <div class="calendar-container">
+                    <div class="card flex justify-content-center">
+                        <p-calendar [(ngModel)]="date" class="treetableDate"></p-calendar>
+                    </div>
+                    <div class="card flex justify-content-center">
+                        <p-calendar [(ngModel)]="date1" class="treetableDate"></p-calendar>
+                    </div>
+                    <div class="buscarButton">
+                        <p-button styleClass="p-button-rounded p-button-warning p-button" label="Buscar">
                         </p-button>
                     </div>   
                 </div>                
