@@ -20,11 +20,11 @@ export class TelaFinanceiroComponent implements OnInit{
     private alunosService: AlunosService,
     ) {}
   ngOnInit() {
-    this.alunosService.getAlunosMini().then((data: Alunos[]) => {
-      this.alunos = data;
-    
+   // this.alunosService.getAlunosMini().then((data: Alunos[]) => {
+     // this.alunos = data;
+     //this.alunosService.getAlunosData.then((data: Alunos[]) => {
 
-    });
-  } 
+    };
+  }
 
-}
+

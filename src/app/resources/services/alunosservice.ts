@@ -1,309 +1,323 @@
 import { Injectable } from '@angular/core';
-    
+import { Aluno } from '../domain/aluno';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
 @Injectable({
     providedIn:'root'
 })
 
+
 export class AlunosService {
-    getAlunosData() {
-        return [
-            {
-                matricula: '00001',
-                nome: 'Joao da Silva',
-                plano: 'Ouro',
-                situacao: 'Ativo',
-                status: 'Pago',               
-            },
-            {
-                matricula: '00002',
-                nome: 'Marisa da Silva Brito',
-                plano: 'Bronze',
-                situacao: 'Inativo',
-                status: 'Pago',  
-            },
-            {
-                matricula: '00003',
-                nome: 'Joaquim Souza',
-                plano: 'Prata',
-                situacao: 'Ativo',
-                status: 'Pendente',  
-            },
-            {
-                matricula: '00004',
-                nome: 'Joaquim Souza',
-                plano: 'Prata',
-                situacao: 'Ativo',
-                status: 'Pendente', 
-            },
-            {
-                matricula: '00005',
-                nome: 'Joaquim Souza',
-                plano: 'Prata',
-                situacao: 'Ativo',
-                status: 'Pendente', 
-            },
-            {
-                matricula: '00006',
-                nome: 'Joaquim Souza',
-                plano: 'Prata',
-                situacao: 'Ativo',
-                status: 'Pendente', 
-            },
-            {
-                matricula: '00007',
-                nome: 'Joaquim Souza',
-                plano: 'Prata',
-                situacao: 'Ativo',
-                status: 'Pendente', 
-            },
-            {
-                matricula: '00008',
-                nome: 'Joaquim Souza',
-                plano: 'Prata',
-                situacao: 'Ativo',
-                status: 'Pendente', 
-            },
-            {
-                matricula: '00009',
-                nome: 'Mauricio Souza',
-                plano: 'Prata',
-                situacao: 'Ativo',
-                status: 'Pendente', 
-            },
-            {
-                matricula: '00010',
-                nome: 'Joaquim Souza',
-                plano: 'Ouro',
-                situacao: 'Inativo',
-                status: 'Pendente', 
-            },
-            {
-                matricula: '00011',
-                nome: 'Joaquim Souza',
-                plano: 'Ouro',
-                situacao: 'Inativo',
-                status: 'Pendente',
-            },
-            {
-                matricula: '00012',
-                nome: 'Joaquim Souza',
-                plano: 'Ouro',
-                situacao: 'Inativo',
-                status: 'Pendente',
-            },
-            {
-                id: '00013',
-                nome: 'Joaquim Souza',
-                plano: 'Ouro',
-                situacao: 'Inativo',
-                status: 'Pendente',
-            },
-            {
-                id: '1013',
-                matricula: 'fldsmn31b',
-                name: 'Grey T-Shirt',
-                description: 'Product Description',
-                image: 'grey-t-shirt.jpg',
-                price: 48,
-                category: 'Clothing',
-                quantity: 0,
-                inventoryStatus: 'OUTOFSTOCK',
-                rating: 3
-            },
-            {
-                id: '1014',
-                matricula: 'waas1x2as',
-                name: 'Headphones',
-                description: 'Product Description',
-                image: 'headphones.jpg',
-                price: 175,
-                category: 'Electronics',
-                quantity: 8,
-                inventoryStatus: 'LOWSTOCK',
-                rating: 5
-            },
-            {
-                id: '1015',
-                matricula: 'vb34btbg5',
-                name: 'Light Green T-Shirt',
-                description: 'Product Description',
-                image: 'light-green-t-shirt.jpg',
-                price: 49,
-                category: 'Clothing',
-                quantity: 34,
-                inventoryStatus: 'INSTOCK',
-                rating: 4
-            },
-            {
-                id: '1016',
-                matricula: 'k8l6j58jl',
-                name: 'Lime Band',
-                description: 'Product Description',
-                image: 'lime-band.jpg',
-                price: 79,
-                category: 'Fitness',
-                quantity: 12,
-                inventoryStatus: 'INSTOCK',
-                rating: 3
-            },
-            {
-                id: '1017',
-                matricula: 'v435nn85n',
-                name: 'Mini Speakers',
-                description: 'Product Description',
-                image: 'mini-speakers.jpg',
-                price: 85,
-                category: 'Clothing',
-                quantity: 42,
-                inventoryStatus: 'INSTOCK',
-                rating: 4
-            },
-            {
-                id: '1018',
-                matricula: '09zx9c0zc',
-                name: 'Painted Phone Case',
-                description: 'Product Description',
-                image: 'painted-phone-case.jpg',
-                price: 56,
-                category: 'Accessories',
-                quantity: 41,
-                inventoryStatus: 'INSTOCK',
-                rating: 5
-            },
-            {
-                id: '1019',
-                matricula: 'mnb5mb2m5',
-                name: 'Pink Band',
-                description: 'Product Description',
-                image: 'pink-band.jpg',
-                price: 79,
-                category: 'Fitness',
-                quantity: 63,
-                inventoryStatus: 'INSTOCK',
-                rating: 4
-            },
-            {
-                id: '1020',
-                matricula: 'r23fwf2w3',
-                name: 'Pink Purse',
-                description: 'Product Description',
-                image: 'pink-purse.jpg',
-                price: 110,
-                category: 'Accessories',
-                quantity: 0,
-                inventoryStatus: 'OUTOFSTOCK',
-                rating: 4
-            },
-            {
-                id: '1021',
-                matricula: 'pxpzczo23',
-                name: 'Purple Band',
-                description: 'Product Description',
-                image: 'purple-band.jpg',
-                price: 79,
-                category: 'Fitness',
-                quantity: 6,
-                inventoryStatus: 'LOWSTOCK',
-                rating: 3
-            },
-            {
-                id: '1022',
-                matricula: '2c42cb5cb',
-                name: 'Purple Gemstone Necklace',
-                description: 'Product Description',
-                image: 'purple-gemstone-necklace.jpg',
-                price: 45,
-                category: 'Accessories',
-                quantity: 62,
-                inventoryStatus: 'INSTOCK',
-                rating: 4
-            },
-            {
-                id: '1023',
-                matricula: '5k43kkk23',
-                name: 'Purple T-Shirt',
-                description: 'Product Description',
-                image: 'purple-t-shirt.jpg',
-                price: 49,
-                category: 'Clothing',
-                quantity: 2,
-                inventoryStatus: 'LOWSTOCK',
-                rating: 5
-            },
-            {
-                id: '1024',
-                matricula: 'lm2tny2k4',
-                name: 'Shoes',
-                description: 'Product Description',
-                image: 'shoes.jpg',
-                price: 64,
-                category: 'Clothing',
-                quantity: 0,
-                inventoryStatus: 'INSTOCK',
-                rating: 4
-            },
-            {
-                id: '1025',
-                matricula: 'nbm5mv45n',
-                name: 'Sneakers',
-                description: 'Product Description',
-                image: 'sneakers.jpg',
-                price: 78,
-                category: 'Clothing',
-                quantity: 52,
-                inventoryStatus: 'INSTOCK',
-                rating: 4
-            },
-            {
-                id: '1026',
-                matricula: 'zx23zc42c',
-                name: 'Teal T-Shirt',
-                description: 'Product Description',
-                image: 'teal-t-shirt.jpg',
-                price: 49,
-                category: 'Clothing',
-                quantity: 3,
-                inventoryStatus: 'LOWSTOCK',
-                rating: 3
-            },
-            {
-                id: '1027',
-                code: 'acvx872gc',
-                name: 'Yellow Earbuds',
-                description: 'Product Description',
-                image: 'yellow-earbuds.jpg',
-                price: 89,
-                category: 'Electronics',
-                quantity: 35,
-                inventoryStatus: 'INSTOCK',
-                rating: 3
-            },
-            {
-                id: '1028',
-                code: 'tx125ck42',
-                name: 'Yoga Mat',
-                description: 'Product Description',
-                image: 'yoga-mat.jpg',
-                price: 20,
-                category: 'Fitness',
-                quantity: 15,
-                inventoryStatus: 'INSTOCK',
-                rating: 5
-            },
-            {
-                id: '1029',
-                code: 'gwuby345v',
-                name: 'Yoga Set',
-                description: 'Product Description',
-                image: 'yoga-set.jpg',
-                price: 20,
-                category: 'Fitness',
-                quantity: 25,
-                inventoryStatus: 'INSTOCK',
-                rating: 8
-            }
-        ];
-    }
+
+  constructor( private http :  HttpClient) {
+
+
+   }
+
+  getAlunosData() : Observable<Aluno[]>{
+    return this.http.get<Aluno[]>('https://manangment-gym-production.up.railway.app/student');
+  }
+
+    // getAlunosData() {
+    //     return [
+    //         {
+    //             matricula: '00001',
+    //             nome: 'Joao da Silva',
+    //             plano: 'Ouro',
+    //             situacao: 'Ativo',
+    //             status: 'Pago',
+    //         },
+    //         {
+    //             matricula: '00002',
+    //             nome: 'Marisa da Silva Brito',
+    //             plano: 'Bronze',
+    //             situacao: 'Inativo',
+    //             status: 'Pago',
+    //         },
+    //         {
+    //             matricula: '00003',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Prata',
+    //             situacao: 'Ativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00004',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Prata',
+    //             situacao: 'Ativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00005',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Prata',
+    //             situacao: 'Ativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00006',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Prata',
+    //             situacao: 'Ativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00007',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Prata',
+    //             situacao: 'Ativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00008',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Prata',
+    //             situacao: 'Ativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00009',
+    //             nome: 'Mauricio Souza',
+    //             plano: 'Prata',
+    //             situacao: 'Ativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00010',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Ouro',
+    //             situacao: 'Inativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00011',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Ouro',
+    //             situacao: 'Inativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             matricula: '00012',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Ouro',
+    //             situacao: 'Inativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             id: '00013',
+    //             nome: 'Joaquim Souza',
+    //             plano: 'Ouro',
+    //             situacao: 'Inativo',
+    //             status: 'Pendente',
+    //         },
+    //         {
+    //             id: '1013',
+    //             matricula: 'fldsmn31b',
+    //             name: 'Grey T-Shirt',
+    //             description: 'Product Description',
+    //             image: 'grey-t-shirt.jpg',
+    //             price: 48,
+    //             category: 'Clothing',
+    //             quantity: 0,
+    //             inventoryStatus: 'OUTOFSTOCK',
+    //             rating: 3
+    //         },
+    //         {
+    //             id: '1014',
+    //             matricula: 'waas1x2as',
+    //             name: 'Headphones',
+    //             description: 'Product Description',
+    //             image: 'headphones.jpg',
+    //             price: 175,
+    //             category: 'Electronics',
+    //             quantity: 8,
+    //             inventoryStatus: 'LOWSTOCK',
+    //             rating: 5
+    //         },
+    //         {
+    //             id: '1015',
+    //             matricula: 'vb34btbg5',
+    //             name: 'Light Green T-Shirt',
+    //             description: 'Product Description',
+    //             image: 'light-green-t-shirt.jpg',
+    //             price: 49,
+    //             category: 'Clothing',
+    //             quantity: 34,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 4
+    //         },
+    //         {
+    //             id: '1016',
+    //             matricula: 'k8l6j58jl',
+    //             name: 'Lime Band',
+    //             description: 'Product Description',
+    //             image: 'lime-band.jpg',
+    //             price: 79,
+    //             category: 'Fitness',
+    //             quantity: 12,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 3
+    //         },
+    //         {
+    //             id: '1017',
+    //             matricula: 'v435nn85n',
+    //             name: 'Mini Speakers',
+    //             description: 'Product Description',
+    //             image: 'mini-speakers.jpg',
+    //             price: 85,
+    //             category: 'Clothing',
+    //             quantity: 42,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 4
+    //         },
+    //         {
+    //             id: '1018',
+    //             matricula: '09zx9c0zc',
+    //             name: 'Painted Phone Case',
+    //             description: 'Product Description',
+    //             image: 'painted-phone-case.jpg',
+    //             price: 56,
+    //             category: 'Accessories',
+    //             quantity: 41,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 5
+    //         },
+    //         {
+    //             id: '1019',
+    //             matricula: 'mnb5mb2m5',
+    //             name: 'Pink Band',
+    //             description: 'Product Description',
+    //             image: 'pink-band.jpg',
+    //             price: 79,
+    //             category: 'Fitness',
+    //             quantity: 63,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 4
+    //         },
+    //         {
+    //             id: '1020',
+    //             matricula: 'r23fwf2w3',
+    //             name: 'Pink Purse',
+    //             description: 'Product Description',
+    //             image: 'pink-purse.jpg',
+    //             price: 110,
+    //             category: 'Accessories',
+    //             quantity: 0,
+    //             inventoryStatus: 'OUTOFSTOCK',
+    //             rating: 4
+    //         },
+    //         {
+    //             id: '1021',
+    //             matricula: 'pxpzczo23',
+    //             name: 'Purple Band',
+    //             description: 'Product Description',
+    //             image: 'purple-band.jpg',
+    //             price: 79,
+    //             category: 'Fitness',
+    //             quantity: 6,
+    //             inventoryStatus: 'LOWSTOCK',
+    //             rating: 3
+    //         },
+    //         {
+    //             id: '1022',
+    //             matricula: '2c42cb5cb',
+    //             name: 'Purple Gemstone Necklace',
+    //             description: 'Product Description',
+    //             image: 'purple-gemstone-necklace.jpg',
+    //             price: 45,
+    //             category: 'Accessories',
+    //             quantity: 62,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 4
+    //         },
+    //         {
+    //             id: '1023',
+    //             matricula: '5k43kkk23',
+    //             name: 'Purple T-Shirt',
+    //             description: 'Product Description',
+    //             image: 'purple-t-shirt.jpg',
+    //             price: 49,
+    //             category: 'Clothing',
+    //             quantity: 2,
+    //             inventoryStatus: 'LOWSTOCK',
+    //             rating: 5
+    //         },
+    //         {
+    //             id: '1024',
+    //             matricula: 'lm2tny2k4',
+    //             name: 'Shoes',
+    //             description: 'Product Description',
+    //             image: 'shoes.jpg',
+    //             price: 64,
+    //             category: 'Clothing',
+    //             quantity: 0,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 4
+    //         },
+    //         {
+    //             id: '1025',
+    //             matricula: 'nbm5mv45n',
+    //             name: 'Sneakers',
+    //             description: 'Product Description',
+    //             image: 'sneakers.jpg',
+    //             price: 78,
+    //             category: 'Clothing',
+    //             quantity: 52,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 4
+    //         },
+    //         {
+    //             id: '1026',
+    //             matricula: 'zx23zc42c',
+    //             name: 'Teal T-Shirt',
+    //             description: 'Product Description',
+    //             image: 'teal-t-shirt.jpg',
+    //             price: 49,
+    //             category: 'Clothing',
+    //             quantity: 3,
+    //             inventoryStatus: 'LOWSTOCK',
+    //             rating: 3
+    //         },
+    //         {
+    //             id: '1027',
+    //             code: 'acvx872gc',
+    //             name: 'Yellow Earbuds',
+    //             description: 'Product Description',
+    //             image: 'yellow-earbuds.jpg',
+    //             price: 89,
+    //             category: 'Electronics',
+    //             quantity: 35,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 3
+    //         },
+    //         {
+    //             id: '1028',
+    //             code: 'tx125ck42',
+    //             name: 'Yoga Mat',
+    //             description: 'Product Description',
+    //             image: 'yoga-mat.jpg',
+    //             price: 20,
+    //             category: 'Fitness',
+    //             quantity: 15,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 5
+    //         },
+    //         {
+    //             id: '1029',
+    //             code: 'gwuby345v',
+    //             name: 'Yoga Set',
+    //             description: 'Product Description',
+    //             image: 'yoga-set.jpg',
+    //             price: 20,
+    //             category: 'Fitness',
+    //             quantity: 25,
+    //             inventoryStatus: 'INSTOCK',
+    //             rating: 8
+    //         }
+    //     ];
+    // }
 
     getProductsWithOrdersData() {
         return [
@@ -1139,13 +1153,13 @@ export class AlunosService {
         ];
     }
 
-    getAlunosMini() {
-        return Promise.resolve(this.getAlunosData().slice(0, 10));
-    }
+    // getAlunosMini() {
+    //     return Promise.resolve(this.getAlunosData().slice(0, 10));
+    // }
 
-    getProductsSmall() {
-        return Promise.resolve(this.getAlunosData().slice(0, 10));
-    }
+    // getProductsSmall() {
+    //     return Promise.resolve(this.getAlunosData().slice(0, 10));
+    // }
 
     getProducts() {
         return Promise.resolve(this.getAlunosData());
@@ -1158,7 +1172,7 @@ export class AlunosService {
     getProductsWithOrders() {
         return Promise.resolve(this.getProductsWithOrdersData());
     }
-    //criando metodo para deletar o aluno 
+    //criando metodo para deletar o aluno
     //remove: alunos => {
     //     return callApi({
     //         method: "DELETE",
