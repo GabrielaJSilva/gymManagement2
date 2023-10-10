@@ -38,12 +38,16 @@ $font-sizeMenu: 16px;
 .InputEmail{
     margin-top: 2em;
     margin-left: 6%;
-    text-align: left;  
+    text-align: left; 
+    
 }
 .InputSenha{
     margin-top: 1.5em;
     text-align: left;
     margin-left: 6%;
+}
+::placeholder { 
+    background-color: #ffffff;
 }
 .botao{
     text-align: center;

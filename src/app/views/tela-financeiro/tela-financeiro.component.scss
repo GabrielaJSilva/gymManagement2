@@ -42,8 +42,7 @@ $font-sizeMenu: 16px;
     width: 60%;
     min-width: 740px;
     flex-wrap: wrap;
-    justify-content: space-between;
-   
+    justify-content: space-between;  
 }
 .fin-container2{
     display: flex;
@@ -58,8 +57,7 @@ $font-sizeMenu: 16px;
     }
     :nth-child(3){
         margin-right: -1.6em;
-    }
-   
+    }  
 }
 
 .per-container{
@@ -81,7 +79,6 @@ $font-sizeMenu: 16px;
     min-width: 740px;
     flex-wrap: wrap;
     justify-content: space-between;
-    // margin-left: 1em;
     margin-top: 1em;
     :nth-child(1){
         margin-left: 0.2em;
@@ -121,8 +118,10 @@ $font-sizeMenu: 16px;
     height: 100%;
     min-height: 200px;
 }
-.p-input-icon-left{
-    margin-top: 1em;
+.marginPinput{
+    .p-input-icon-left{
+        margin-top: 1em;
+    }
 }
 .menucus {
     background-color: transparent;
@@ -130,9 +129,6 @@ $font-sizeMenu: 16px;
     height: 100%;
     margin-top: 4em;           
 }
-// .botaoEnviar{
-
-// }
 .menucus ul li:nth-child(1) {
     margin-top: 0em;   
 }
@@ -223,16 +219,12 @@ $font-sizeMenu: 16px;
 .p-datatable .p-paginator-bottom{
     border-width: 0;
 }
-
 .tableFin{
-
     .p-datatable .p-datatable-tbody > tr > td {
         text-align: left;
         border: 1px solid #dee2e6;
         border-width: 0 0 1px 0;
-        padding: 0.1rem 0.1rem;
-        // margin-left: 1em; nao funciona
-        
+        padding: 0.1rem 0.1rem;       
     }
     .p-datatable .p-datatable-thead > tr > th {
         padding: 0.09em 1em;
@@ -242,9 +234,7 @@ $font-sizeMenu: 16px;
     //     margin-left: 0.3em;
     // }
 }
-// .treetableDate .ui-widget-content{
-//     width: 30%; // or in pixel depends how much width you want.
-// }
+
 .treetableDate{
     .p-calendar .p-inputtext {
         flex: 1 1 auto;
@@ -257,7 +247,6 @@ $font-sizeMenu: 16px;
 //     width: 2%;
 // }
 .p-checkbox .p-checkbox-box {
-
     background: #000000;
 }
 .buscarButton{
