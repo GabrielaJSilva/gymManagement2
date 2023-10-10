@@ -11,6 +11,7 @@ import { MenuModule } from 'src/app/views/menu/menu.module';
 import { TelaAlunosComponent } from './tela-alunos.component';
 import { DialogModule } from 'primeng/dialog';
 import { ScrollerModule } from 'primeng/scroller';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [TelaAlunosComponent],
@@ -26,7 +27,8 @@ import { ScrollerModule } from 'primeng/scroller';
     FormsModule,
     MenuModule,
     DialogModule,
-    ScrollerModule
+    ScrollerModule,
+    InputTextModule
   ],
   exports: [TelaAlunosComponent]
 })
