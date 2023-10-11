@@ -22,12 +22,13 @@ $font-color2: #fff !important;
     position: absolute;
     margin-top: -4em;
     margin-left: 3em;
+    .p-button.p-button-icon-only.p-button-rounded {
+        border-radius: 50%;
+        height: 2em;
+        width: 2em;
+    }
 }
-.p-button.p-button-icon-only.p-button-rounded {
-    border-radius: 50%;
-    height: 2em;
-    width: 2em;
-}
+
 .profCard:hover {
     .deleteButton{
         display: inline-block;}
