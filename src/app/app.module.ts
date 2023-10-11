@@ -13,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { MenuModule } from 'src/app/views/menu/menu.module';
+import { AlunosService } from './resources/services/alunosservice';
+
 //import { TelaDetalheAlunoComponent } from './views/tela-detalhe-aluno/tela-detalhe-aluno.component';
 //import { PlanoCardComponent } from './views/plano-card/plano-card.component';
 //import { ProfCardComponent } from './views/prof-card/prof-card.component';
@@ -38,10 +40,10 @@ import { MenuModule } from 'src/app/views/menu/menu.module';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
     CardModule,
-    HttpClientModule,
     InputTextModule,
     ButtonModule,
     AppRoutingModule,
@@ -49,7 +51,9 @@ import { MenuModule } from 'src/app/views/menu/menu.module';
     CommonModule,
  //   MenuModule
   ],
-  providers: [],
+  providers: [
+    AlunosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

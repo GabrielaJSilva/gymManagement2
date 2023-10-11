@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Alunos } from 'src/app/resources/domain/alunos';
 import { AlunosService } from 'src/app/resources/services/alunosservice';
 import { Router } from '@angular/router';
+import { Student } from '../../resources/domain/student';
+
 
 @Component({
   selector: 'app-tela-alunos',
@@ -10,6 +12,7 @@ import { Router } from '@angular/router';
 })
 export class TelaAlunosComponent {
   alunos!: Alunos [];
+  listaAlunosMinha!: Student [];
   selectedAluno!: Alunos;
   visible: boolean = false;
   value1: string | undefined;
@@ -17,17 +20,20 @@ export class TelaAlunosComponent {
     this.visible = true;
   }
   constructor(
-    private alunosService: AlunosService,
+    private service: AlunosService,
     private router: Router,
     ) {}
   ngOnInit() {
-    
-    this.alunosService.getAlunosMini().then((data: Alunos[]) => {
-      this.alunos = data;
-      
-    });
-  
-}
+
+    //this.alunosService.getAlunosMini().then((data: Alunos[]) => {
+      //this.alunos = data;
+      this.service
+      .getAlunosData()
+      .subscribe( resposta => this.listaAlunosMinha = resposta );
+
+    };
 
 }
+
+
 
