@@ -11,8 +11,12 @@ import { ProfessoresService } from 'src/app/resources/services/professores.servi
 export class ProfCardComponent implements OnInit {
   professores!: Professores [];
   selectedProfessor!: Professores;
+  visible: boolean = false;
+  visible1: boolean = false;
   public addProfessor: AddProfessor | undefined;
-
+  deletarProf(){
+    this.visible = true;
+  }
   constructor(
     private professoresService: ProfessoresService,
 

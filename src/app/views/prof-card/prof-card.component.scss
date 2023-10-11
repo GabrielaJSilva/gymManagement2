@@ -17,6 +17,10 @@ $font-color2: #fff !important;
         text-align: center;
     }
 }
+.deletarDialog{
+    z-index: 999999;
+    position: sticky;
+}
 .deleteButton{
     display: none;
     position: absolute;

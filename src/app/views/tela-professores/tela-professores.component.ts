@@ -10,12 +10,16 @@ import { ProfessoresService } from 'src/app/resources/services/professores.servi
 })
 export class TelaProfessoresComponent implements OnInit {
   visible: boolean = false;
+  visible1: boolean = false;
   professores!: Professores [];
   selectedProfessor!: Professores;
   public addProfessor: AddProfessor = new AddProfessor;
 
   cadastrarProf(){
     this.visible = true;
+  }
+  deletarProf(){
+    this.visible1 = true;
   }
   constructor(
     private professoresService: ProfessoresService,
