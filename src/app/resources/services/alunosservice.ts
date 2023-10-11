@@ -15,7 +15,6 @@ export class AlunosService {
    }
 
   getAlunosData() : Observable<Student[]>{
-
     return this.http.get<Student[]>('https://gym-managmente.onrender.com/student');
   }
 
@@ -1153,9 +1152,12 @@ export class AlunosService {
         ];
     }
 
+
     // getAlunosMini() {
     //     return Promise.resolve(this.getAlunosData().slice(0, 10));
     // }
+
+
 
     // getProductsSmall() {
     //     return Promise.resolve(this.getAlunosData().slice(0, 10));

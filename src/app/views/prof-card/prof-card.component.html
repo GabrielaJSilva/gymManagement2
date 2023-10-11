@@ -1,16 +1,27 @@
 <p-card class="profCard" >
     <div >
         <div class="deleteButton">
+            <p-dialog class="deletarDialog" header="Deletar Professor" [(visible)]="visible" [style]="{width: '25vw', height:'20vw' }">
+                <div class="InputNome">
+                    <div>
+                        <p> Você deseja deletar o professor selecionado?</p>
+                    </div>
+                </div>
+                <div class="botaoSalvar">
+                    <p-button  styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
+                </div>
+            </p-dialog>
             <span>
-            <p-button icon="pi pi-times" styleClass="p-button-rounded p-button-danger"></p-button>
+            <p-button (click)="deletarProf()" icon="pi pi-times" styleClass="p-button-rounded p-button-danger"></p-button>
             </span>
         </div>
+
             <!-- será trocado por ng -->
          <h5>Nome Professor</h5> 
 <!--            <h5>{{professores.nome}}</h5>-->
          <h5> 99-9999-9999</h5> 
          <h5>@redeSocial</h5>
-         
+
              
     
     </div>
