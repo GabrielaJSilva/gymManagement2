@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Aluno } from '../domain/aluno';
-import { HttpClient } from '@angular/common/http';
+import { Student } from '../domain/student';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 
 @Injectable({
     providedIn:'root'
@@ -11,12 +12,11 @@ import { Observable } from 'rxjs';
 export class AlunosService {
 
   constructor( private http :  HttpClient) {
-
-
    }
 
-  getAlunosData() : Observable<Aluno[]>{
-    return this.http.get<Aluno[]>('https://manangment-gym-production.up.railway.app/student');
+  getAlunosData() : Observable<Student[]>{
+
+    return this.http.get<Student[]>('https://gym-managmente.onrender.com/student');
   }
 
     // getAlunosData() {

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Alunos } from 'src/app/resources/domain/alunos';
 import { AlunosService } from 'src/app/resources/services/alunosservice';
 import { Router } from '@angular/router';
-import { Aluno } from '../../resources/domain/aluno';
+import { Student } from '../../resources/domain/student';
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Aluno } from '../../resources/domain/aluno';
 })
 export class TelaAlunosComponent {
   alunos!: Alunos [];
-  listaAlunosMinha!: Aluno [];
+  listaAlunosMinha!: Student [];
   selectedAluno!: Alunos;
   visible: boolean = false;
   value1: string | undefined;
@@ -27,9 +27,6 @@ export class TelaAlunosComponent {
 
     //this.alunosService.getAlunosMini().then((data: Alunos[]) => {
       //this.alunos = data;
-
-
-
       this.service
       .getAlunosData()
       .subscribe( resposta => this.listaAlunosMinha = resposta );
