@@ -51,19 +51,22 @@ $font-sizeMenu: 16px;
 }
 .searchEdeletar{
     position: absolute;
-    margin-left: 2em;
     margin-top: -1em;
 }
 .inputSearch{
-    margin-left: -1em;
-}
-::placeholder { 
-    background-color: #ffffff;
+    .p-input-icon-left{
+        margin-top: -1em;
+        margin-left: 1em;
+    }    
 }
 .botaoDeletar{
     margin-left: 42em;
     margin-top: -2em;
 }
+::placeholder { 
+    background-color: #ffffff;
+}
+
 
 .p-table.p-element{
     border-color: #fff !important;

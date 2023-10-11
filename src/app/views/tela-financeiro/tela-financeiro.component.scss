@@ -194,11 +194,7 @@ $font-sizeMenu: 16px;
     margin-left: 1em;
     font-weight: bold;
 }
-.p-datatable.myTable{
-    margin-top: 1em;
-    margin-right: 1em;
-    margin-bottom: 2em;
-}
+
 .p-datatable.myTable th{
     background: rgb(0, 0, 0) ! important;
     color: $font-color;
@@ -229,10 +225,11 @@ $font-sizeMenu: 16px;
     .p-datatable .p-datatable-thead > tr > th {
         padding: 0.09em 1em;
     }
-    //margem para a lista de alunos
-    // .p-datatable-table {
-    //     margin-left: 0.3em;
-    // }
+    .p-datatable.myTable{
+        margin-top: 1em;
+        margin-right: 1em;
+        margin-bottom: 2em;
+    }
 }
 
 .treetableDate{
