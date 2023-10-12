@@ -5,10 +5,10 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
 import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
-//import { CheckboxModule } from 'primeng/checkbox';
 import { CommonModule } from '@angular/common';
 //import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   declarations: [TelaCadastroComponent],
@@ -19,10 +19,10 @@ import { MenuModule } from 'src/app/views/menu/menu.module';
     DividerModule,
     TableModule,
     ButtonModule,
-//    CheckboxModule,
     CommonModule,
  //   FormsModule,    
     MenuModule,
+    InputTextModule
   ]
 })
 export class TelaCadastroModule { }
