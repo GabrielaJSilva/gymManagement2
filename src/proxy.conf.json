@@ -1,6 +1,6 @@
 {
     "/api/*": {
-      "target": "http://gym-managmente.onrender.com",      
+      "target": "https://gym-managmente.onrender.com/",
       "secure": false,
       "changeOrigin": true,
       "pathRewrite": {
