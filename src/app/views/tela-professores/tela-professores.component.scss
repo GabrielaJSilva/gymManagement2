@@ -154,3 +154,10 @@ $font-sizeMenu: 16px;
     height: 79%;
     min-height: 500px;
 }
+.deletarDialog{
+    //z-index: 999999;
+    position: absolute;
+    opacity: none;
+    z-index: 9999 !important;
+    
+}

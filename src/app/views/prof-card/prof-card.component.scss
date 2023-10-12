@@ -18,8 +18,11 @@ $font-color2: #fff !important;
     }
 }
 .deletarDialog{
-    z-index: 999999;
-    position: sticky;
+    //z-index: 999999;
+    position: absolute;
+    opacity: none;
+    z-index: 9999 !important;
+    
 }
 .deleteButton{
     display: none;
@@ -37,4 +40,12 @@ $font-color2: #fff !important;
     .deleteButton{
         display: inline-block;}
 
+}
+.botaoConfirmar{
+    text-align: center;
+    justify-content: center;
+    .p-button .p-button-label {
+
+        margin: -2.2em;
+    }
 }
