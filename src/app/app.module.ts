@@ -14,6 +14,8 @@ import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 import { AlunosService } from './resources/services/alunosservice';
+import { DetalheAlunoComponent } from './views/detalhe-aluno/detalhe-aluno/detalhe-aluno.component';
+
 
 //import { TelaDetalheAlunoComponent } from './views/tela-detalhe-aluno/tela-detalhe-aluno.component';
 //import { PlanoCardComponent } from './views/plano-card/plano-card.component';
@@ -25,35 +27,36 @@ import { AlunosService } from './resources/services/alunosservice';
 //import { MenuComponent } from './views/menu/menu.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LoginComponent,
-//    TelaDetalheAlunoComponent,
-//    PlanoCardComponent,
-//    ProfCardComponent,
-//    TelaCadastroComponent,
-//    TelaFinanceiroComponent,
- //   TelaPlanosComponent,
- //   TelaProfessoresComponent,
-//   TelaAlunosComponent,
-//    MenuComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    CardModule,
-    InputTextModule,
-    ButtonModule,
-    AppRoutingModule,
-    TableModule,
-    CommonModule,
- //   MenuModule
-  ],
-  providers: [
-    AlunosService
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        LoginComponent,
+        DetalheAlunoComponent,
+        //    TelaDetalheAlunoComponent,
+        //    PlanoCardComponent,
+        //    ProfCardComponent,
+        //    TelaCadastroComponent,
+        //    TelaFinanceiroComponent,
+        //   TelaPlanosComponent,
+        //   TelaProfessoresComponent,
+        //   TelaAlunosComponent,
+        //    MenuComponent
+    ],
+    providers: [
+        AlunosService
+    ],
+    bootstrap: [AppComponent],
+    imports: [
+        BrowserModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        FormsModule,
+        CardModule,
+        InputTextModule,
+        ButtonModule,
+        AppRoutingModule,
+        TableModule,
+        CommonModule,
+     
+    ]
 })
 export class AppModule { }

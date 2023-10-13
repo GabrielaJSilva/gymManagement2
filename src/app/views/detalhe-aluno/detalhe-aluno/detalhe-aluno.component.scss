@@ -1,0 +1,44 @@
+
+.base-container{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  height: 100vh;
+  width: 70%;
+  margin: 10%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.92;
+  border-radius: 15px;
+
+}
+.detalhes {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+  width: 100%;
+
+}
+
+.detalhes > div{
+  margin: 2%;
+  width: 50%;
+
+}
+
+.detalhes label{
+  border: 1px solid red;
+  color: #FCA311;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.detalhes span{
+  border: 1px solid red;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+

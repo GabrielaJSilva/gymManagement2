@@ -22,6 +22,11 @@ export class AlunosService {
     return this.http.post('api/student', student)
   }
 
+  findById(id : number) : Observable<Student>{
+    console.log("passou no service")
+    return this.http.get<Student>('api/student/by-id?id='+id)
+  }
+
 
 
     getProductsWithOrdersData() {

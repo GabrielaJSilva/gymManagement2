@@ -15,6 +15,7 @@ export class TelaAlunosComponent {
   selectedAluno!: Alunos;
   visible: boolean = false;
   value1: string | undefined;
+  student !: Student
   deletarAluno(){
     this.visible = true;
   }
@@ -28,7 +29,17 @@ export class TelaAlunosComponent {
                 .getAllStudent()
                 .subscribe( resposta => this.students = resposta );
 
-    };
+    }
+
+    abrirDetalheAluno(id : number){
+      console.log("Checou aqui..."+id)
+     this.router.navigate(['by-id', id]);
+    }
+
+    findById(id: number){
+      return this.service.findById(id).subscribe(resposta => this.student = resposta)
+    }
+
 
 }
 

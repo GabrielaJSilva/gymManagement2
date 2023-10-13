@@ -37,7 +37,7 @@
         </ng-template>
         <ng-template pTemplate="body" let-students>
 
-            <tr>
+            <tr (click)="abrirDetalheAluno(students.id)">
                <td class="linhacheckbox">
                     <p-tableCheckbox [value]="students" ></p-tableCheckbox>
                 </td>
