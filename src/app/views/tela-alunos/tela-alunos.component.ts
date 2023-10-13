@@ -11,8 +11,8 @@ import { Student } from '../../resources/domain/student';
   styleUrls: ['./tela-alunos.component.scss']
 })
 export class TelaAlunosComponent {
-  alunos!: Alunos [];
-  listaAlunosMinha!: Student [];
+  //alunos!: Alunos [];
+  students!: Student [];
   selectedAluno!: Alunos;
   visible: boolean = false;
   value1: string | undefined;
@@ -25,11 +25,9 @@ export class TelaAlunosComponent {
     ) {}
   ngOnInit() {
 
-    //this.alunosService.getAlunosMini().then((data: Alunos[]) => {
-      //this.alunos = data;
       this.service
-      .getAlunosData()
-      .subscribe( resposta => this.listaAlunosMinha = resposta );
+                .getAllStudent()
+                .subscribe( resposta => this.students = resposta );
 
     };
 

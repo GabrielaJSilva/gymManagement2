@@ -25,7 +25,7 @@ export class TelaProfessoresComponent implements OnInit {
     private professoresService: ProfessoresService,
 
     ) {}
-  ngOnInit(): void { 
+  ngOnInit(): void {
     this.addProfessor = new AddProfessor();
 }
   //Não esquecer de iniciar o metodo get professor
@@ -37,6 +37,8 @@ public doProf(): void{
 
   //fazendo a chamada no serviço
   this.professoresService.addProfessor(this.addProfessor)
+
+  this.professoresService.getAllTeachers().subscribe(resposta => this.professores = resposta)
 }}
 
 //getProfessores(){
