@@ -10,42 +10,40 @@
             <div class="prof-container">
                 <ng-container>
                     <app-prof-card> </app-prof-card>
-                    <app-prof-card> </app-prof-card>
-                    <app-prof-card> </app-prof-card>
-                    <app-prof-card> </app-prof-card>
-                    <app-prof-card> </app-prof-card>
 
-                  
+
                 </ng-container>
             <p-dialog header="Cadastrar Professor" [(visible)]="visible" [style]="{width: '28vw', height:'36vw' }">
-                <div class="InputNome">
+              <form #professorForm="ngForm" (ngSubmit)="doProf()">
+              <div class="InputNome">
                     <div>
                         <label htmlFor="username">Nome</label>
-                        <input [(ngModel)]="addProfessor.name" pInputText id="username" />
+                        <input [(ngModel)]="addProfessor.name" pInputText id="username" name="username" />
 
                     </div>
                 </div>
                 <div class="InputCelular">
                     <div>
                         <label htmlFor="celular">Celular</label>
-                        <input [(ngModel)]="addProfessor.numberPhone" pInputText id="celular" />
+                        <input [(ngModel)]="addProfessor.numberPhone" pInputText id="celular" name="celular" />
 
                     </div>
                 </div>
                 <div class="InputRedeSocial">
                     <div>
                         <label htmlFor="redeSocial">Rede Social</label>
-                        <input [(ngModel)]="addProfessor.socialNetwork" pInputText id="redeSocial" />
+                        <input [(ngModel)]="addProfessor.socialNetwork" pInputText id="redeSocial"  name="redeSocial"/>
 
                     </div>
                 </div>
 
                 <div class="botaoSalvar">
-                    <p-button (click)="doProf()" styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
+                    <p-button type="submit" styleClass="p-button-rounded p-button-warning" label="Salvar" name="salvar"> </p-button>
                 </div>
+              </form>
             </p-dialog>
-            
-            
+
+
             </div>
 
 

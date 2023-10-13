@@ -1,4 +1,4 @@
-<p-card class="profCard">
+<p-card class="profCard" *ngFor="let professor of professores">
     <div>
         <p-dialog class="deletarDialog" header="Deletar Professor" [(visible)]="visible"
             [style]="{width: '25vw', height:'20vw' }">
@@ -20,12 +20,9 @@
         </div>
 
         <!-- será trocado por ng -->
-        <h5>Nome Professor</h5>
-        <!--            <h5>{{professores.nome}}</h5>-->
-        <h5> 99-9999-9999</h5>
-        <h5>@redeSocial</h5>
-
-
+        <h5> {{ professor.name }}</h5>
+        <h5> {{ professor.numberPhone}}</h5>
+        <h5>{{ professor.socialNetwork }}</h5>
 
     </div>
 </p-card>

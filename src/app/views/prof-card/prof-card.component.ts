@@ -18,14 +18,12 @@ export class ProfCardComponent implements OnInit {
     this.visible = true;
   }
   constructor(
-    private professoresService: ProfessoresService,
-
-    ) {}
+    private professoresService: ProfessoresService) {}
   ngOnInit(): void {
      this.addProfessor = new AddProfessor();
      //this.professores = this.professoresService.getProfessoresData();
-      
+     this.professoresService.getAllTeachers().subscribe(resposta => this.professores = resposta)
      };
-    
+
 }
 

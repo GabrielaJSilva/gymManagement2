@@ -31,14 +31,15 @@ export class TelaProfessoresComponent implements OnInit {
   //Não esquecer de iniciar o metodo get professor
   //this.getProfessores();
 
-public doProf(): void{
+public doProf(){
   //para ver o objeto no console
   //console.log(this.addProfessor);
 
   //fazendo a chamada no serviço
-  this.professoresService.addProfessor(this.addProfessor)
+  console.log(this.addProfessor)
+  this.professoresService.addProfessor(this.addProfessor).subscribe(resposta => this.addProfessor = resposta);
 
-  this.professoresService.getAllTeachers().subscribe(resposta => this.professores = resposta)
+
 }}
 
 //getProfessores(){
