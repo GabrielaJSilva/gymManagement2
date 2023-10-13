@@ -10,8 +10,12 @@ import { Observable } from 'rxjs';
 export class ProfessoresService {
 
   constructor(private httpClient: HttpClient) {}
-  public addProfessor(addProfessor: AddProfessor){
-    return this.httpClient.post('api/teacher', addProfessor);
+
+  public addProfessor(addProfessor: AddProfessor) : Observable<AddProfessor>{
+    console.log("passou no service")
+
+
+    return this.httpClient.post<AddProfessor>('api/teacher', addProfessor);
   }
 
   public getAllTeachers() : Observable<Professores[]>{
