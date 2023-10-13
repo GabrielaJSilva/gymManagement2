@@ -1,18 +1,18 @@
-<div class="titulo"> 
-    <h3>Alunos</h3>  
+<div class="titulo">
+    <h3>Alunos</h3>
     <div class="cardBase">
-     <p-table 
-     [value]="alunos" 
+     <p-table
+     [value] = students
      [paginator]="true"
      [rows]="10"
      [showCurrentPageReport]="true"
-     [tableStyle]="{'min-width': '50rem'}" 
-     styleClass="myTable" 
+     [tableStyle]="{'min-width': '50rem'}"
+     styleClass="myTable"
      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-     [rowsPerPageOptions]="[10, 20, 50]">                            
-  
+     [rowsPerPageOptions]="[10, 20, 50]">
+
      <ng-template pTemplate="header">
-        
+
             <div class="searchEdeletar">
                 <div class="inputSearch">
                     <span class="p-input-icon-left">
@@ -24,32 +24,32 @@
                     <p-button (onClick)="deletarAluno()" styleClass="p-button-danger" label="Deletar"></p-button>
                 </div>
             </div>
-            <tr>
+            <tr >
                 <th style="width: 1rem">
                     <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
-                </th>                                
+                </th>
                 <th>Matrícula</th>
                 <th>Nome</th>
                 <th>Plano</th>
                 <th>Situação</th>
                 <th>Status de Pagamento</th>
-            </tr>                       
+            </tr>
         </ng-template>
-        <ng-template pTemplate="body" let-alunos>
-        
+        <ng-template pTemplate="body" let-students>
+
             <tr>
-                <td class="linhacheckbox">
-                    <p-tableCheckbox [value]="alunos" ></p-tableCheckbox>
-                </td>                                
-                <td>{{ alunos.matricula }}</td>
-                <td>{{ alunos.nome }}</td>
-                <td>{{ alunos.plano }}</td>
-                <td>{{ alunos.situacao }}</td>
-                <td>{{ alunos.status }}</td>
+               <td class="linhacheckbox">
+                    <p-tableCheckbox [value]="students" ></p-tableCheckbox>
+                </td>
+                <td>{{ students.id }}</td>
+                <td>{{ students.name }}</td>
+                <td>{{ students.plan.namePlan }}</td>
+                <td>{{ students.situation }}</td>
+                <td>{{ students.paymentStatus }}</td>
             </tr>
 
         </ng-template>
-        <ng-template pTemplate="paginatorleft">           
+        <ng-template pTemplate="paginatorleft">
         </ng-template>
         <ng-template pTemplate="paginatorright">
         </ng-template>
@@ -63,5 +63,5 @@
         </div>
     </p-dialog>
     </div>
-                 
+
 </div>

@@ -27,7 +27,7 @@ public doLogin(): void{
     this.router.navigate(['dashboard'])
 
     },
-    (httperror) => {
+    () => {
       this.router.navigate(['dashboard'])
     //this.alertService.error('', httperror.error.message);
   });

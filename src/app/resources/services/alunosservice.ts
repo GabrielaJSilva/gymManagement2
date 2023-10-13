@@ -14,9 +14,15 @@ export class AlunosService {
   constructor( private http :  HttpClient) {
    }
 
-  getAlunosData() : Observable<any>{
-    return this.http.get('api/student');
+  getAllStudent() : Observable<Student[]>{
+       return this.http.get<Student[]>('api/student');
   }
+
+  createAluno(student : Student) {
+    return this.http.post('api/student', student)
+  }
+
+
 
     getProductsWithOrdersData() {
         return [
@@ -864,7 +870,7 @@ export class AlunosService {
     // }
 
     getProducts() {
-        return Promise.resolve(this.getAlunosData());
+        return Promise.resolve(this.getAllStudent);
     }
 
     getProductsWithOrdersSmall() {
