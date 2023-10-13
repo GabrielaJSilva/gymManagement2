@@ -19,12 +19,10 @@ $font-color2: #fff !important;
     }
 }
 .deletarDialog{
-    //z-index: 999999;
     position: absolute;
     opacity: none;
-    z-index: 9999 !important;
-
 }
+
 .deleteButton{
     display: none;
     position: absolute;
@@ -36,17 +34,20 @@ $font-color2: #fff !important;
         width: 2em;
     }
 }
-
+// .toastP{
+//     display: flex;
+//     position: inherit;
+//     margin-left: 22em;
+//     justify-content: end;
+// }
 .profCard:hover {
     .deleteButton{
         display: inline-block;}
-
 }
 .botaoConfirmar{
     text-align: center;
     justify-content: center;
     .p-button .p-button-label {
-
         margin: -2.2em;
     }
 }

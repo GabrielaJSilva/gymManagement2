@@ -1,29 +1,44 @@
-import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Professores } from 'src/app/resources/domain/professores';
 import { AddProfessor } from 'src/app/resources/models/AddProfessor';
 import { ProfessoresService } from 'src/app/resources/services/professores.service';
+import { MessageService } from 'primeng/api';
+
 @Component({
   selector: 'app-prof-card',
   templateUrl: './prof-card.component.html',
   styleUrls: ['./prof-card.component.scss'],
   encapsulation: ViewEncapsulation.None,
+  providers: [MessageService]
 })
 export class ProfCardComponent implements OnInit {
-  professores!: Professores [];
+  professores!: Professores[];
   selectedProfessor!: Professores;
   visible: boolean = false;
   visible1: boolean = false;
   public addProfessor: AddProfessor | undefined;
-  deletarProf(){
+ 
+  //dialog para deletar professor visível
+  dialogDeletarProf() {
     this.visible = true;
   }
+  exluirProf() {
+    //fecha o dialog para deletar professor
+    //  this.visible = false;
+
+    //mostra o toast de sucesso
+    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Successo', detail: 'Professor deletado com sucesso',sticky: true });
+    //fazer a chamada para excluir professor no serviço - abaixo
+  }
+
   constructor(
-    private professoresService: ProfessoresService) {}
+    private professoresService: ProfessoresService,
+    private messageService: MessageService,
+    ) { }
   ngOnInit(): void {
-     this.addProfessor = new AddProfessor();
-     //this.professores = this.professoresService.getProfessoresData();
-     this.professoresService.getAllTeachers().subscribe(resposta => this.professores = resposta)
-     };
+    this.addProfessor = new AddProfessor();
+    this.professoresService.getAllTeachers().subscribe(resposta => this.professores = resposta)
+  };
 
 }
 

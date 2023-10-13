@@ -5,11 +5,12 @@ import { ProfCardComponent } from './prof-card.component';
 import { ButtonModule } from 'primeng/button';
 import { FormsModule } from '@angular/forms';
 import { DialogModule } from 'primeng/dialog';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [ProfCardComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
-    CommonModule,CardModule,ButtonModule,FormsModule,DialogModule
+    CommonModule,CardModule,ButtonModule,FormsModule,DialogModule, ToastModule
   ],
   exports: [ProfCardComponent]
 })

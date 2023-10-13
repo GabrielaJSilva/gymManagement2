@@ -1,25 +1,25 @@
 <p-card class="profCard" *ngFor="let professor of professores">
-    <div>
-        <p-dialog class="deletarDialog" header="Deletar Professor" [(visible)]="visible"
-            [style]="{width: '25vw', height:'20vw' }">
-            <div class="InputNome">
-                <div>
-                    <p> Você deseja deletar o professor selecionado?</p>
-                </div>
-            </div>
-            <div>
-                <p-button class="botaoConfirmar" styleClass="p-button-rounded p-button-warning" label="Confirmar">
-                </p-button>
-            </div>
-        </p-dialog>
+    <div>      
         <div class="deleteButton">
             <span>
-                <p-button (click)="deletarProf()" icon="pi pi-times"
+                <p-button (click)="dialogDeletarProf()" icon="pi pi-times"
                     styleClass="p-button-rounded p-button-danger"></p-button>
             </span>
         </div>
         <h5> {{ professor.name }}</h5>
-        <h5> {{ professor.numberPhone}}</h5>
+        <h5> {{ professor.numberPhone }}</h5>
         <h5>{{ professor.socialNetwork }}</h5>
     </div>
+    <p-dialog class="deletarDialog" header="Deletar Professor" [(visible)]="visible"
+            [style]="{width: '25vw', height:'20vw' }">
+            <div>
+                <p> Você deseja deletar o professor selecionado?</p>
+            </div>
+            <div>
+                <p-toast class= "toastP" position="bottom-center" key="bc"></p-toast>
+                <p-button pRipple (click)="exluirProf()" class="botaoConfirmar"
+                    styleClass="p-button-rounded p-button-warning" label="Confirmar">
+                </p-button>
+            </div>
+        </p-dialog>
 </p-card>
