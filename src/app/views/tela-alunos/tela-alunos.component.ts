@@ -4,7 +4,6 @@ import { AlunosService } from 'src/app/resources/services/alunosservice';
 import { Router } from '@angular/router';
 import { Student } from '../../resources/domain/student';
 
-
 @Component({
   selector: 'app-tela-alunos',
   templateUrl: './tela-alunos.component.html',

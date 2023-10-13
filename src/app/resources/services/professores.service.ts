@@ -13,8 +13,6 @@ export class ProfessoresService {
 
   public addProfessor(addProfessor: AddProfessor) : Observable<AddProfessor>{
     console.log("passou no service")
-
-
     return this.httpClient.post<AddProfessor>('api/teacher', addProfessor);
   }
 

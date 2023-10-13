@@ -39,10 +39,9 @@ $font-sizeMenu: 16px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    border: 1px solid red;
-
+    justify-content: flex-start;   //border: 1px solid red;
 }
+
 .menucus {
     background-color: transparent;
     border-color: transparent;
@@ -110,6 +109,7 @@ $font-sizeMenu: 16px;
 
 }
 .profCard {
+    //display: flex;
     .p-card-body{
         background-color: rgba(255, 255, 255, 0) !important;
         border: solid;

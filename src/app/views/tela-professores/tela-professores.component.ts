@@ -28,8 +28,6 @@ export class TelaProfessoresComponent implements OnInit {
   ngOnInit(): void {
     this.addProfessor = new AddProfessor();
 }
-  //Não esquecer de iniciar o metodo get professor
-  //this.getProfessores();
 
 public doProf(){
   //para ver o objeto no console
@@ -42,6 +40,3 @@ public doProf(){
 
 }}
 
-//getProfessores(){
-//  this.professoresService...
-//}
