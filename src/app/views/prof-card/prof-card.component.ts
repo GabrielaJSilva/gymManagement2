@@ -39,12 +39,12 @@ export class ProfCardComponent implements OnInit {
   }
 
   public exluirProf(id: number) {
-    console.log("Checgou aqui,.,,")
+    console.log("Chegou aqui,.,,")
     this.professoresService
       .deletProfessorById(id)
       .subscribe((resposta) => (this.observa = resposta));
 
-    console.log('Ölha o retorno tem httpStatusCode' + this.observa);
+    console.log('Olha o retorno tem httpStatusCode' + this.observa);
 
     this.messageService.add({
       key: 'bc',
@@ -53,6 +53,5 @@ export class ProfCardComponent implements OnInit {
       detail: 'Professor deletado com sucesso',
       sticky: true,
     });
-    //fazer a chamada para excluir professor no serviço - abaixo
   }
 }

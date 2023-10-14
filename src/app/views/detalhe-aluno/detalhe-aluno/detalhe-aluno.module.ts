@@ -6,13 +6,15 @@ import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
-    CommonModule, MenuModule,TieredMenuModule, FormsModule, CardModule,
-    DividerModule, ButtonModule
+    CommonModule, MenuModule,
+    TieredMenuModule, FormsModule, CardModule,
+    DividerModule, ButtonModule,DialogModule
   ]
 })
 export class DetalheAlunoModule { }

@@ -1,10 +1,10 @@
 <div class="container">
   <app-menu> </app-menu>
   <div class="base-container">
-    <div class="titulo">
-      <h3> Aluno </h3>
-    </div>
     <div class="detalhes">
+      <div class="titulo">
+        <h3> Aluno > <span> {{student.name }}</span></h3>
+      </div>
       <div class="cardBaseDa">
         <div class="linha">
           <label for="id">Matrícula:
@@ -35,8 +35,8 @@
           <label>Sexo:
             <span> {{ student.sexo }}</span>
           </label>
-          <label>Instagram:
-            <span>{{ student?.contact?.socialNetwork }}</span>
+          <label>Plano
+            <span>{{ student?.plan?.namePlan }}</span>
           </label>
 
         </div>
@@ -44,10 +44,24 @@
           <label>Data Nascimento:
             <span> {{ student.birthDate }}</span>
           </label>
-          <label>Plano
-            <span>{{ student?.plan?.namePlan }}</span>
+          <label>
           </label>
         </div>
+        <div class="botaoEditar">
+          <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Editar">
+          </p-button>
+        </div>
+        <div class="botaoDeletar">
+          <p-button styleClass="p-button-danger" label="Deletar"></p-button>
+        </div>
+        <!-- <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
+          <p>
+            Deseja deletar os alunos selecionados?
+          </p>
+          <div class="botaoConfirmar">
+            <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Confirmar"> </p-button>
+          </div>
+        </p-dialog> -->
       </div>
     </div>
   </div>

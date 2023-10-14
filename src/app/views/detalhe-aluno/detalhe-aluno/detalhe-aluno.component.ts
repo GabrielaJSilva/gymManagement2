@@ -12,7 +12,12 @@ export class DetalheAlunoComponent  implements OnInit{
 
   idAluno!: number
   student !: Student
+  visible: boolean = false;
+  
 
+  deletarAluno() {
+    this.visible = true;
+  }
   constructor(private router : ActivatedRoute, private alunoService : AlunosService){}
 
   ngOnInit(){
