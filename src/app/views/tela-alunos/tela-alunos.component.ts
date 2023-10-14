@@ -16,9 +16,9 @@ export class TelaAlunosComponent {
   visible: boolean = false;
   value1: string | undefined;
   student!: Student;
-  deletarAluno() {
-    this.visible = true;
-  }
+  // deletarAluno() {
+  //   this.visible = true;
+  // }
   constructor(private service: AlunosService, private router: Router) {}
   ngOnInit() {
     this.service

@@ -19,43 +19,39 @@
                     <input type="text" class="p-inputtext-sm" pInputText [(ngModel)]="value" />
                 </span>
             </div>
-            <div class="cardBaseU" >
-                <p-table class="tableFin"
-                [value]="alunos"        
-                [rows]="5"          
-                [tableStyle]="{'min-width': '50rem'}" 
-                styleClass="myTable"
-                >                            
-                   <ng-template pTemplate="header">
-                       <tr>
-                           <th>Nome</th>
-                           <th>Status</th>
-                           <th>Situação</th>
-                           <th></th>
-                           <th></th>
-                       </tr>                       
-                   </ng-template>
-                   <ng-template pTemplate="body" let-alunos>        
-                       <tr>                               
-                           <td>{{ alunos.nome }}</td>
-                           <td>{{ alunos.status }}</td>
-                           <td>{{ alunos.situacao }}</td>
-                           <td>
-                            <div class="botaoEnviar">
-                                <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Enviar">
-                                </p-button>
-                            </div>
-                           </td>
-                           <td>
-                            <div class="botaoPagar">
-                                <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Pagar">
-                                </p-button>
-                            </div>
-                           </td>
-                       </tr>
-           
-                   </ng-template>
-                   
+            <div class="cardBaseU">
+                <p-table class="tableFin" [value]="alunos" [rows]="5" [tableStyle]="{'min-width': '50rem'}"
+                    styleClass="myTable">
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th>Nome</th>
+                            <th>Status</th>
+                            <th>Situação</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-alunos>
+                        <tr>
+                            <td>{{ alunos.nome }}</td>
+                            <td>{{ alunos.status }}</td>
+                            <td>{{ alunos.situacao }}</td>
+                            <td>
+                                <div class="botaoEnviar">
+                                    <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Enviar">
+                                    </p-button>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="botaoPagar">
+                                    <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Pagar">
+                                    </p-button>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </ng-template>
+
                 </p-table>
             </div>
             <div class="cardBaseD">
@@ -63,7 +59,7 @@
                 <div class="per-container">
                     <div>Período inicial</div>
                     <div>Período final</div>
-                    <div></div>                   
+                    <div></div>
                 </div>
                 <div class="calendar-container">
                     <div class="card flex justify-content-center">
@@ -75,10 +71,10 @@
                     <div class="buscarButton">
                         <p-button styleClass="p-button-rounded p-button-warning p-button" label="Buscar">
                         </p-button>
-                    </div>   
-                </div>                
+                    </div>
                 </div>
             </div>
-
         </div>
+
+    </div>
 </div>

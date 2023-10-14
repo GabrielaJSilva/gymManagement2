@@ -20,13 +20,13 @@
                         <input type="text" class="p-inputtext-sm" pInputText [(ngModel)]="value1" placeholder="Procurar aluno"/>
                     </span>
                 </div>
-                <div class="botaoDeletar">
+                <!-- <div class="botaoDeletar">
                     <p-button (onClick)="deletarAluno()" styleClass="p-button-danger" label="Deletar"></p-button>
-                </div>
+                </div> -->
             </div>
             <tr >
                 <th style="width: 1rem">
-                    <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+                    <!-- <p-tableHeaderCheckbox></p-tableHeaderCheckbox> -->
                 </th>
                 <th>Matrícula</th>
                 <th>Nome</th>
@@ -39,7 +39,7 @@
 
             <tr (click)="abrirDetalheAluno(students.id)">
                <td class="linhacheckbox">
-                    <p-tableCheckbox [value]="students" ></p-tableCheckbox>
+                    <!-- <p-tableCheckbox [value]="students" ></p-tableCheckbox> -->
                 </td>
                 <td>{{ students.id }}</td>
                 <td>{{ students.name }}</td>
@@ -54,14 +54,14 @@
         <ng-template pTemplate="paginatorright">
         </ng-template>
      </p-table>
-     <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
+     <!-- <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
         <p>
             Deseja deletar os alunos selecionados?
         </p>
         <div class="botaoConfirmar">
             <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Confirmar"> </p-button>
         </div>
-    </p-dialog>
+    </p-dialog> -->
     </div>
 
 </div>
