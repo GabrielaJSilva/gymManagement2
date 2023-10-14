@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Professores } from 'src/app/resources/domain/professores';
 import { AddProfessor } from 'src/app/resources/models/AddProfessor';
 import { ProfessoresService } from 'src/app/resources/services/professores.service';
@@ -11,32 +11,24 @@ import { ProfessoresService } from 'src/app/resources/services/professores.servi
 export class TelaProfessoresComponent implements OnInit {
   visible: boolean = false;
   visible1: boolean = false;
-  professores!: Professores [];
+  professores!: Professores[];
   selectedProfessor!: Professores;
-  public addProfessor: AddProfessor = new AddProfessor;
+  public addProfessor: AddProfessor = new AddProfessor();
 
-  cadastrarProf(){
+  cadastrarProf() {
     this.visible = true;
   }
-  deletarProf(){
+  deletarProf() {
     this.visible1 = true;
   }
-  constructor(
-    private professoresService: ProfessoresService,
-
-    ) {}
+  constructor(private professoresService: ProfessoresService) {}
   ngOnInit(): void {
     this.addProfessor = new AddProfessor();
+  }
+
+  public doProf() {
+    this.professoresService
+      .addProfessor(this.addProfessor)
+      .subscribe((resposta) => (this.addProfessor = resposta));
+  }
 }
-
-public doProf(){
-  //para ver o objeto no console
-  //console.log(this.addProfessor);
-
-  //fazendo a chamada no serviço
-  console.log(this.addProfessor)
-  this.professoresService.addProfessor(this.addProfessor).subscribe(resposta => this.addProfessor = resposta);
-
-
-}}
-

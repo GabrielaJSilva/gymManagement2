@@ -1,5 +1,5 @@
 <p-card class="profCard" *ngFor="let professor of professores">
-    <div>      
+    <div>
         <div class="deleteButton">
             <span>
                 <p-button (click)="dialogDeletarProf()" icon="pi pi-times"
@@ -17,7 +17,7 @@
             </div>
             <div>
                 <p-toast class= "toastP" position="bottom-center" key="bc"></p-toast>
-                <p-button pRipple (click)="exluirProf()" class="botaoConfirmar"
+                <p-button pRipple (click)="exluirProf( professor.id! )" class="botaoConfirmar"
                     styleClass="p-button-rounded p-button-warning" label="Confirmar">
                 </p-button>
             </div>

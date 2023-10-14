@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AddProfessor } from '../models/AddProfessor';
 import { HttpClient } from '@angular/common/http';
 import { Professores } from '../domain/professores';
-import { Observable } from 'rxjs';
+import { Observable, tap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -20,5 +20,9 @@ export class ProfessoresService {
     return this.httpClient.get<Professores[]>('api/teacher');
   }
 
+  public deletProfessorById(id: number){
+    return this.httpClient.delete<any>('api/teacher?id='+id).pipe(tap(response =>
+      response))
+  }
 
 }

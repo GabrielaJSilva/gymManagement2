@@ -3,13 +3,15 @@ import { Professores } from 'src/app/resources/domain/professores';
 import { AddProfessor } from 'src/app/resources/models/AddProfessor';
 import { ProfessoresService } from 'src/app/resources/services/professores.service';
 import { MessageService } from 'primeng/api';
+import { Observable } from 'rxjs';
+import { HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-prof-card',
   templateUrl: './prof-card.component.html',
   styleUrls: ['./prof-card.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  providers: [MessageService]
+  providers: [MessageService],
 })
 export class ProfCardComponent implements OnInit {
   professores!: Professores[];
@@ -17,28 +19,40 @@ export class ProfCardComponent implements OnInit {
   visible: boolean = false;
   visible1: boolean = false;
   public addProfessor: AddProfessor | undefined;
- 
+
+  observa?: Observable<any>;
+
   //dialog para deletar professor visível
   dialogDeletarProf() {
     this.visible = true;
   }
-  exluirProf() {
-    //fecha o dialog para deletar professor
-    //  this.visible = false;
-
-    //mostra o toast de sucesso
-    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Successo', detail: 'Professor deletado com sucesso',sticky: true });
-    //fazer a chamada para excluir professor no serviço - abaixo
-  }
 
   constructor(
     private professoresService: ProfessoresService,
-    private messageService: MessageService,
-    ) { }
+    private messageService: MessageService
+  ) {}
   ngOnInit(): void {
     this.addProfessor = new AddProfessor();
-    this.professoresService.getAllTeachers().subscribe(resposta => this.professores = resposta)
-  };
+    this.professoresService
+      .getAllTeachers()
+      .subscribe((resposta) => (this.professores = resposta));
+  }
 
+  public exluirProf(id: number) {
+    console.log("Checgou aqui,.,,")
+    this.professoresService
+      .deletProfessorById(id)
+      .subscribe((resposta) => (this.observa = resposta));
+
+    console.log('Ölha o retorno tem httpStatusCode' + this.observa);
+
+    this.messageService.add({
+      key: 'bc',
+      severity: 'success',
+      summary: 'Successo',
+      detail: 'Professor deletado com sucesso',
+      sticky: true,
+    });
+    //fazer a chamada para excluir professor no serviço - abaixo
+  }
 }
-
