@@ -39,7 +39,7 @@ $font-sizeMenu: 16px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
    
 }
 .menucus {
@@ -115,11 +115,23 @@ $font-sizeMenu: 16px;
         border-radius: 25px;
         border-width: 1px;
         color: $font-color2;
- //       margin: 3%;
- //       text-align: center;
-        //align-content: center;
+        width: 150px;
+        margin-right: 15px;
+        text-align: center;
     }
 }
+.deleteButtonPlano {
+    display: none;
+    position: absolute;
+    margin-top: -4em;
+    margin-left: 2.7em;
+    .p-button.p-button-icon-only.p-button-rounded {
+        border-radius: 50%;
+        height: 2em;
+        width: 2em;
+    }
+}
+
 
 .InputPlano{
     margin-top: 1.5em;

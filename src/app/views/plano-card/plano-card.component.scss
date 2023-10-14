@@ -1,7 +1,8 @@
 $font-color: #FCA311 !important;
 $font-color2: #fff !important;
+
 .planoCard {
-    .p-card-body{
+    .p-card-body {
         background-color: rgba(255, 255, 255, 0) !important;
         border: solid;
         border-color: #ffffff;
@@ -9,33 +10,42 @@ $font-color2: #fff !important;
         border-width: 1px;
         color: $font-color2;
         margin: 3%;
-        text-align: center;
         min-width: 160px;
+        width: 150px;
         max-width: 160px;
         max-height: 200px;
         min-height: 200px;
-        display: inline-flex;
-
+        text-align: center;
+        margin-right: 10px;
     }
 }
-.deleteButtonPlano{
-    //display: none;
-    visibility: hidden;
+.deletarDialogPlano{
     position: absolute;
-    margin-top: -3em;
-    margin-left: 4.5em;
-
+    opacity: none;
 }
-.p-button.p-button-icon-only.p-button-rounded {
-    border-radius: 50%;
-    height: 2em;
-    width: 2em;
-}
-
-.planoCard:hover {
-    .deleteButtonPlano{
-     visibility: visible;
-      border: 1px solid red;
+.deleteButtonPlano {
+    display: none;
+    position: absolute;
+    margin-top: -4em;
+    margin-left: 2.7em;
+    .p-button.p-button-icon-only.p-button-rounded {
+        border-radius: 50%;
+        height: 2em;
+        width: 2em;
     }
-  }
+}
+.planoCard:hover {
+    .deleteButtonPlano {
+        display: inline-block;
+    }
+}
+
 //}
+.botaoConfirmar {
+    text-align: center;
+    justify-content: center;
+
+    .p-button .p-button-label {
+        margin: -2.2em;
+    }
+}

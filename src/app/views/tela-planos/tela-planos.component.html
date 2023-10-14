@@ -8,34 +8,33 @@
                     label="Cadastrar">
                 </p-button>
             </div>
-            <div class="plano-container">
+            <div>
                 <ng-container>
-                        <app-plano-card></app-plano-card>
-
-                        <p-dialog header="Cadastrar Plano" [(visible)]="visible"
-                            [style]="{width: '28vw', height:'30vw'}">
-
-                            <div class="InputPlano">
-                                <div>
-                                    <label htmlFor="celular">Plano</label>
-                                    <input pInputText id="celular" />
-
-                                </div>
-                            </div>
-                            <div class="InputHorario">
-                                <div>
-                                    <label htmlFor="redeSocial">Horário</label>
-                                    <input pInputText id="redeSocial" />
-
-                                </div>
-                            </div>
-
-                            <div class="botaoSalvar">
-                                <p-button styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
-                            </div>
-                        </p-dialog>
-
+                    <app-plano-card class="plano-container"></app-plano-card>
                 </ng-container>
+                <p-dialog header="Cadastrar Plano" [(visible)]="visible" [style]="{width: '28vw', height:'30vw'}">
+
+                    <div class="InputPlano">
+                        <div>
+                            <label htmlFor="celular">Plano</label>
+                            <input pInputText id="celular" />
+
+                        </div>
+                    </div>
+                    <div class="InputHorario">
+                        <div>
+                            <label htmlFor="redeSocial">Horário</label>
+                            <input pInputText id="redeSocial" />
+
+                        </div>
+                    </div>
+
+                    <div class="botaoSalvar">
+                        <p-button styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
+                    </div>
+                </p-dialog>
+
+
                 <div>
                 </div>
             </div>

@@ -1,14 +1,24 @@
 <p-card class="planoCard" *ngFor="let plan of plans">
-  <div class="deleteButtonPlano" (click)="deletePlan( plan.id! )">
-    <span>
-      <p-button
-        icon="pi pi-times"
-        styleClass="p-button-rounded p-button-danger"
-      ></p-button>
-    </span>
-  </div>
-  <div class="dadosPlano">
+  <div>
+    <div class="deleteButtonPlano">
+      <span>
+        <p-button (click)="dialogDeletarPlano()" icon="pi pi-times"
+          styleClass="p-button-rounded p-button-danger"></p-button>
+      </span>
+    </div>
     <h5>{{ plan.namePlan }}</h5>
     <h5>{{ plan.valuePlan }}</h5>
   </div>
+  <!-- <p-dialog class="deletarDialogPlano" header="Deletar Plano" [(visible)]="visible2"
+        [style]="{width: '25vw', height:'20vw' }">
+        <div>
+            <p> Você deseja deletar o plano selecionado?</p>
+        </div>
+        <div>
+            <p-toast class="toastP" position="bottom-center" key="bc"></p-toast>
+            <p-button pRipple (click)="deletePlan( plan.id!)" class="botaoConfirmar"
+                styleClass="p-button-rounded p-button-warning" label="Confirmar">
+            </p-button>
+        </div>
+    </p-dialog> -->
 </p-card>

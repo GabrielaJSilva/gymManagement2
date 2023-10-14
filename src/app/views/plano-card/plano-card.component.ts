@@ -1,16 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Plan } from 'src/app/resources/domain/Plan';
 import { PlanoService } from 'src/app/resources/services/plano.service';
-
+import { MessageService } from 'primeng/api';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'app-plano-card',
   templateUrl: './plano-card.component.html',
   styleUrls: ['./plano-card.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  providers: [MessageService],
 })
 export class PlanoCardComponent implements OnInit {
   plans?: Plan[];
+  //selectedPlano!: Plano;
+  visible: boolean = false;
+  visible2: boolean = false;
+  //public addPlano: AddPlano | undefined;
+  dialogDeletarPlano(): void {
+    this.visible2 = true;
+  }
+  constructor(
+    private service: PlanoService,
+    private messageService: MessageService
 
-  constructor(private service: PlanoService) {}
+    ) {}
 
   ngOnInit() {
     this.service.getAllPlans().subscribe((resposta) => (this.plans = resposta));
@@ -19,5 +32,13 @@ export class PlanoCardComponent implements OnInit {
   public deletePlan(id: number) {
     console.log("Chegou aqui Component"+id)
     this.service.deletePlanById(id);
+
+    this.messageService.add({
+      key: 'bc',
+      severity: 'success',
+      summary: 'Successo',
+      detail: 'Professor deletado com sucesso',
+      sticky: true,
+    });
   }
 }

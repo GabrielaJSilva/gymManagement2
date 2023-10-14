@@ -11,15 +11,15 @@
         <h5>{{ professor.socialNetwork }}</h5>
     </div>
     <p-dialog class="deletarDialog" header="Deletar Professor" [(visible)]="visible"
-            [style]="{width: '25vw', height:'20vw' }">
-            <div>
-                <p> Você deseja deletar o professor selecionado?</p>
-            </div>
-            <div>
-                <p-toast class= "toastP" position="bottom-center" key="bc"></p-toast>
-                <p-button pRipple (click)="exluirProf( professor.id! )" class="botaoConfirmar"
-                    styleClass="p-button-rounded p-button-warning" label="Confirmar">
-                </p-button>
-            </div>
-        </p-dialog>
+        [style]="{width: '25vw', height:'20vw' }">
+        <div>
+            <p> Você deseja deletar o professor selecionado?</p>
+        </div>
+        <div>
+            <p-toast class="toastP" position="bottom-center" key="bc"></p-toast>
+            <p-button pRipple (click)="exluirProf( professor.id! )" class="botaoConfirmar"
+                styleClass="p-button-rounded p-button-warning" label="Confirmar">
+            </p-button>
+        </div>
+    </p-dialog>
 </p-card>
