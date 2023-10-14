@@ -24,19 +24,19 @@
         </div>
         <div class="linha">
           <label>Email:
-            <span> EM HAVER</span>
+            <span>{{ student?.contact?.email }}</span>
           </label>
 
           <label>Telefone:
-            <span> Em Haver</span>
+            <span>{{ student?.contact?.numberPhone }}</span>
           </label>
         </div>
         <div class="linha">
           <label>Sexo:
-            <span> EM Haver</span>
+            <span> {{ student.sexo }}</span>
           </label>
           <label>Instagram:
-            <span>Instagram {{ student.paymentStatus }}</span>
+            <span>{{ student?.contact?.socialNetwork }}</span>
           </label>
 
         </div>
@@ -45,7 +45,7 @@
             <span> {{ student.birthDate }}</span>
           </label>
           <label>Plano
-            <span>Instagram {{ student.paymentStatus }}</span>
+            <span>{{ student?.plan?.namePlan }}</span>
           </label>
         </div>
       </div>

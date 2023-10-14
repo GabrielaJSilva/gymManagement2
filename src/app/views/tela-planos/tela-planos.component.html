@@ -4,18 +4,14 @@
         <div class="titulo">
             <h3> Planos </h3>
             <div class="botaoCadastrar">
-                <p-button (click)="cadastrarPlano()" styleClass="p-button-rounded p-button-warning p-button-sm" 
+                <p-button (click)="cadastrarPlano()" styleClass="p-button-rounded p-button-warning p-button-sm"
                     label="Cadastrar">
                 </p-button>
             </div>
             <div class="plano-container">
                 <ng-container>
                         <app-plano-card></app-plano-card>
-                        <app-plano-card></app-plano-card>
-                        <app-plano-card></app-plano-card>
-                        <app-plano-card></app-plano-card>
-                        <app-plano-card></app-plano-card>
-                        <app-plano-card></app-plano-card>
+
                         <p-dialog header="Cadastrar Plano" [(visible)]="visible"
                             [style]="{width: '28vw', height:'30vw'}">
 
@@ -38,7 +34,7 @@
                                 <p-button styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
                             </div>
                         </p-dialog>
-                    
+
                 </ng-container>
                 <div>
                 </div>

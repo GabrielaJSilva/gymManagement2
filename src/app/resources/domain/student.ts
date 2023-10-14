@@ -7,7 +7,7 @@ export class Student{
   id?: number
   name?: String;
   sexo?: String;
-  contacts?: Array<Contacts>;
+  contact?: Contacts;
   measurements?: Array<Measurement>;
   birthDate?: String;
   situation?: String;

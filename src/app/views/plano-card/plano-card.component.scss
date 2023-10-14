@@ -14,10 +14,13 @@ $font-color2: #fff !important;
         max-width: 160px;
         max-height: 200px;
         min-height: 200px;
+        display: inline-flex;
+
     }
 }
 .deleteButtonPlano{
-    display: none;
+    //display: none;
+    visibility: hidden;
     position: absolute;
     margin-top: -3em;
     margin-left: 4.5em;
@@ -31,6 +34,8 @@ $font-color2: #fff !important;
 
 .planoCard:hover {
     .deleteButtonPlano{
-        display: inline-block;}
-
-}
+     visibility: visible;
+      border: 1px solid red;
+    }
+  }
+//}
