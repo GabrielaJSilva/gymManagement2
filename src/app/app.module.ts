@@ -12,9 +12,11 @@ import { FormsModule } from '@angular/forms';
 //import { TelaProfessoresComponent } from './views/tela-professores/tela-professores.component';
 import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
-import { MenuModule } from 'src/app/views/menu/menu.module';
+//import { MenuModule } from 'src/app/views/menu/menu.module';
 import { AlunosService } from './resources/services/alunosservice';
 import { DetalheAlunoComponent } from './views/detalhe-aluno/detalhe-aluno/detalhe-aluno.component';
+import { MenuModule } from "./views/menu/menu.module";
+//import { MenuModule_1 as MenuModule } from "./views/menu/menu.module";
 
 
 //import { TelaDetalheAlunoComponent } from './views/tela-detalhe-aluno/tela-detalhe-aluno.component';
@@ -56,7 +58,7 @@ import { DetalheAlunoComponent } from './views/detalhe-aluno/detalhe-aluno/detal
         AppRoutingModule,
         TableModule,
         CommonModule,
-     
+        MenuModule
     ]
 })
 export class AppModule { }

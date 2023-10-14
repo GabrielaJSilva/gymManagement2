@@ -1,53 +1,54 @@
-
-
-<div class="container base-container">
-
-  <div class="detalhes">
-    <div>
-      <label for="id">Matrícula
-        <span id="id">  {{ student.id }}</span>
-      </label>
-
-      <label>Nome
-        <span> {{ student.name }}</span>
-      </label>
-      <label>Email
-        <span>  EM HAVER</span>
-      </label>
-      <label>Sexo
-        <span> EM Haver</span>
-      </label>
-      <label>Data Nascimento
-        <span> {{ student.birthDate }}</span>
-      </label>
+<div class="container">
+  <app-menu> </app-menu>
+  <div class="base-container">
+    <div class="titulo">
+      <h3> Aluno </h3>
     </div>
+    <div class="detalhes">
+      <div class="cardBaseDa">
+        <div class="linha">
+          <label for="id">Matrícula:
+            <span id="id"> {{ student.id }}</span>
+          </label>
+          <label>Situação:
+            <span> {{ student.situation }}</span>
+          </label>
+        </div>
+        <div class="linha">
+          <label>Nome:
+            <span> {{ student.name }}</span>
+          </label>
+          <label>Status de Pagamento:
+            <span> {{ student.paymentStatus }}</span>
+          </label>
+        </div>
+        <div class="linha">
+          <label>Email:
+            <span> EM HAVER</span>
+          </label>
 
+          <label>Telefone:
+            <span> Em Haver</span>
+          </label>
+        </div>
+        <div class="linha">
+          <label>Sexo:
+            <span> EM Haver</span>
+          </label>
+          <label>Instagram:
+            <span>Instagram {{ student.paymentStatus }}</span>
+          </label>
 
-    <div>
-      <label>Situação
-      <span> {{ student.situation }}</span>
-      </label>
-      <label>Status de Pagamento
-        <span> {{ student.paymentStatus }}</span>
-      </label>
-      <label>Telefone
-        <span> Em Haver</span>
-      </label>
-      <label>Instagram
-        <span>Instagram {{ student.paymentStatus }}</span>
-      </label>
-      <label>Plano
-        <span>Instagram {{ student.paymentStatus }}</span>
-      </label>
-   </div>
-
+        </div>
+        <div class="linha">
+          <label>Data Nascimento:
+            <span> {{ student.birthDate }}</span>
+          </label>
+          <label>Plano
+            <span>Instagram {{ student.paymentStatus }}</span>
+          </label>
+        </div>
+      </div>
+    </div>
   </div>
-
-   <div>
-    <span>Medidas  Em Haver</span>
-   </div>
-
 </div>
-
-
-

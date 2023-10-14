@@ -6,7 +6,6 @@ import { DividerModule } from 'primeng/divider';
 import { TableModule } from 'primeng/table';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
-//import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 import { InputTextModule } from 'primeng/inputtext';
 
