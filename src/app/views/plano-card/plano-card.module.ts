@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { CardModule } from 'primeng/card';
 import { PlanoCardComponent } from './plano-card.component';
 import { ButtonModule } from 'primeng/button';
+import { DialogModule } from 'primeng/dialog';
+import { ToastModule } from 'primeng/toast';
 @NgModule({
   declarations: [PlanoCardComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   imports: [
-    CommonModule,CardModule, ButtonModule
+    CommonModule,CardModule, ButtonModule, DialogModule, ToastModule
   ],
   exports: [PlanoCardComponent]
 })
