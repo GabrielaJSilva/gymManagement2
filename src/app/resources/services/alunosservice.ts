@@ -15,7 +15,7 @@ export class AlunosService {
    }
 
   getAllStudent() : Observable<Student[]>{
-       return this.http.get<Student[]>('https://manangment-gym-production.up.railway.app/student');
+       return this.http.get<Student[]>('api/student');
   }
 
   createAluno(student : Student) {
