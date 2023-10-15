@@ -10,7 +10,7 @@ import { Student } from '../../resources/domain/student';
   styleUrls: ['./tela-alunos.component.scss'],
 })
 export class TelaAlunosComponent {
-  //alunos!: Alunos [];
+
   students!: Student[];
   selectedAluno!: Alunos;
   visible: boolean = false;
