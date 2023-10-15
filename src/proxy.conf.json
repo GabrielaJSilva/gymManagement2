@@ -2,9 +2,9 @@
     "/api/*": {
       "target": "https://manangment-gym-production.up.railway.app/",
       "secure": false,
-      "changeOrigin": true,
-      "pathRewrite": {
-        "^/api" : ""
-      }
+     "changeOrigin": true,
+    "pathRewrite": {
+      "^/api" : ""
+     }
     }
-  }
+ }
