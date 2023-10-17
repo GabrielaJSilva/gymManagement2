@@ -1,8 +1,69 @@
 <div class="container">
-
-    <div class="base-container">
-        <div class="titulo">
-            <h3> Detalhe aluno </h3>           
+  <!--<app-menu> </app-menu>-->
+  <div class="base-container">
+    <div class="detalhes">
+      <div class="titulo">
+        <h3> Aluno > <span> {{student.name }}</span></h3>
+      </div>
+      <div class="cardBaseDa">
+        <div class="linha">
+          <label for="id">Matrícula:
+            <span id="id"> {{ student.id }}</span>
+          </label>
+          <label>Situação:
+            <span> {{ student.situation }}</span>
+          </label>
         </div>
+        <div class="linha">
+          <label>Nome:
+            <span> {{ student.name }}</span>
+          </label>
+          <label>Status de Pagamento:
+            <span> {{ student.paymentStatus }}</span>
+          </label>
+        </div>
+        <div class="linha">
+          <label>Email:
+            <span>{{ student.contact?.email }}</span>
+          </label>
+
+          <label>Telefone:
+            <span>{{ student.contact?.numberPhone }}</span>
+          </label>
+        </div>
+        <div class="linha">
+          <label>Sexo:
+            <span> {{ student.sexo }}</span>
+          </label>
+          <label>Plano
+            <span>{{ student?.plan?.namePlan }}</span>
+          </label>
+
+        </div>
+        <div class="linha">
+          <label>Data Nascimento:
+            <span> {{ student.birthDate }}</span>
+          </label>
+          <label>
+          </label>
+        </div>
+        <div class="botaoEditar">
+          <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Editar">
+          </p-button>
+        </div>
+        <div class="botaoDeletarA">
+          <p-button styleClass="p-button-danger" label="Deletar"></p-button>
+        </div>
+        <!-- <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
+          <p>
+            Deseja deletar os alunos selecionados?
+          </p>
+          <div class="botaoConfirmar">
+            <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Confirmar"> </p-button>
+          </div>
+        </p-dialog> -->
+      </div>
     </div>
+  </div>
 </div>
+

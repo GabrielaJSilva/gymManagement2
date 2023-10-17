@@ -7,14 +7,17 @@ import { CommonModule } from '@angular/common'
 import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 import { DialogModule } from 'primeng/dialog';
+import { TelaDetalheAlunoComponent } from './tela-detalhe-aluno.component';
 
 @NgModule({
   declarations: [],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ],
   imports: [
     CommonModule, MenuModule,
     TieredMenuModule, FormsModule, CardModule,
     DividerModule, ButtonModule,DialogModule
   ]
 })
-export class DetalheAlunoModule { }
+export class TelaDetalheModule { }

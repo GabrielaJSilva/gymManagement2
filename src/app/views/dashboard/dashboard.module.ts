@@ -17,6 +17,7 @@ import { TelaFinanceiroModule } from '../tela-financeiro/tela-financeiro.module'
 import { TelaCadastroModule } from '../tela-cadastro/tela-cadastro.module';
 import { ProfCardModule } from '../prof-card/prof-card.module';
 import { DialogModule } from 'primeng/dialog';
+import { TelaDetalheModule } from '../tela-detalhe-aluno/tela-detalhe.module';
 @NgModule({
   declarations: [ DashboardComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
@@ -38,8 +39,8 @@ import { DialogModule } from 'primeng/dialog';
     TelaCadastroModule,
     ProfCardModule,
     DialogModule,
-//    TelaDetalheAlunoModule
-    
+    TelaDetalheModule
+
   ]
 })
 export class DashboardModule { }
