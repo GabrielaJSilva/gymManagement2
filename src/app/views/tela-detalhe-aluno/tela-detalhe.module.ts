@@ -10,7 +10,7 @@ import { DialogModule } from 'primeng/dialog';
 import { TelaDetalheAlunoComponent } from './tela-detalhe-aluno.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [TelaDetalheAlunoComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],

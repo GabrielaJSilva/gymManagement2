@@ -1,5 +1,5 @@
 <div class="container">
-  <!--<app-menu> </app-menu>-->
+  <app-menu> </app-menu>
   <div class="base-container">
     <div class="detalhes">
       <div class="titulo">
@@ -52,16 +52,16 @@
           </p-button>
         </div>
         <div class="botaoDeletarA">
-          <p-button styleClass="p-button-danger" label="Deletar"></p-button>
+          <p-button (click)="deletarAluno()" styleClass="p-button-danger" label="Deletar"></p-button>
         </div>
-        <!-- <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
+         <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
           <p>
             Deseja deletar os alunos selecionados?
           </p>
           <div class="botaoConfirmar">
             <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Confirmar"> </p-button>
           </div>
-        </p-dialog> -->
+        </p-dialog>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@ import { TableModule } from 'primeng/table';
 import { CommonModule } from '@angular/common';
 //import { MenuModule } from 'src/app/views/menu/menu.module';
 import { AlunosService } from './resources/services/alunosservice';
-import { TelaDetalheAlunoComponent } from './views/tela-detalhe-aluno/tela-detalhe-aluno.component';
+//import { TelaDetalheAlunoComponent } from './views/tela-detalhe-aluno/tela-detalhe-aluno.component';
 import { MenuModule } from "./views/menu/menu.module";
 //import { MenuModule_1 as MenuModule } from "./views/menu/menu.module";
 
@@ -33,7 +33,7 @@ import { MenuModule } from "./views/menu/menu.module";
     declarations: [
         AppComponent,
         LoginComponent,
-        TelaDetalheAlunoComponent,
+        //TelaDetalheAlunoComponent,
         //   TelaDetalheAlunoComponent,
         //    PlanoCardComponent,
         //    ProfCardComponent,
