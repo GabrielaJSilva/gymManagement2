@@ -1,10 +1,34 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Student } from 'src/app/resources/domain/student';
+import { AlunosService } from 'src/app/resources/services/alunosservice';
+
+
 @Component({
-  selector: 'app-tela-detalhe-aluno',
+  selector: 'app-detalhe-aluno',
   templateUrl: './tela-detalhe-aluno.component.html',
   styleUrls: ['./tela-detalhe-aluno.component.scss']
 })
-export class TelaDetalheAlunoComponent {
+
+export class TelaDetalheAlunoComponent implements OnInit{
+
+
+  idAluno!: number
+  student !: Student
+  visible: boolean = false;
+
+
+  deletarAluno() {
+    this.visible = true;
+  }
+  constructor(private router : ActivatedRoute, private alunoService : AlunosService){}
+
+  ngOnInit(){
+   this.router.params.subscribe((objeto: any) => {
+      this.idAluno = objeto.id
+      this.alunoService.findById(this.idAluno).subscribe(resposta => this.student = resposta )
+
+   })
+  }
 
 }

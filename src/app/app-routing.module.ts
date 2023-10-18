@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './views/login/login.component';
-import { DetalheAlunoComponent } from './views/detalhe-aluno/detalhe-aluno/detalhe-aluno.component';
+import { TelaDetalheAlunoComponent } from './views/tela-detalhe-aluno/tela-detalhe-aluno.component';
 //import { AuthGuardService } from './resources/services/auth-guard.service';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
-  {path: 'by-id/:id', component: DetalheAlunoComponent},
+  {path: 'by-id/:id', component: TelaDetalheAlunoComponent},
   {
     path: 'dashboard',
    // canActivate: [AuthGuardService],

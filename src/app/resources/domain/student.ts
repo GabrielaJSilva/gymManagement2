@@ -7,10 +7,10 @@ export class Student{
   id?: number
   name?: String;
   sexo?: String;
-  contact?: Contacts;
+  contact?: Contacts | undefined;
   measurements?: Array<Measurement>;
   birthDate?: String;
   situation?: String;
   paymentStatus?: String;
-  plan?: Plan;
+  plan?: Plan | undefined;
 }
