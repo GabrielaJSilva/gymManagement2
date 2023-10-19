@@ -73,6 +73,12 @@ $font-sizeMenu: 16px;
     margin-left: 46em;
     margin-top: -2.1em;
 }
+.botaoConfirmar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .menucus {
     background-color: transparent;
     border-color: transparent;
@@ -144,7 +150,6 @@ $font-sizeMenu: 16px;
   font-family: $font-family1;
   display: flex;
   flex-direction: column;
- // margin-top: 5em;
   width: 100%;
 }
 

@@ -52,18 +52,18 @@
           </p-button>
         </div>
         <div class="botaoDeletarA">
-          <p-button (click)="deletarAluno()" styleClass="p-button-danger" label="Deletar"></p-button>
+          <p-button (click)="dialogDeletarA()" styleClass="p-button-danger" label="Deletar"></p-button>
         </div>
-         <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
+        <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
           <p>
             Deseja deletar os alunos selecionados?
           </p>
           <div class="botaoConfirmar">
-            <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Confirmar"> </p-button>
+            <p-toast position="bottom-center" key="bc"></p-toast>
+            <p-button (click)="deletarAluno()" styleClass="p-button-rounded p-button-warning p-button-sm" label="Confirmar"> </p-button>
           </div>
         </p-dialog>
       </div>
     </div>
   </div>
 </div>
-

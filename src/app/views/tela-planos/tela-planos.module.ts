@@ -10,6 +10,8 @@ import { MenuModule } from 'src/app/views/menu/menu.module';
 import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { PlanoCardModule } from '../plano-card/plano-card.module';
+import { ToastModule } from 'primeng/toast';
+
 @NgModule({
   declarations: [ TelaPlanosComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
@@ -19,14 +21,12 @@ import { PlanoCardModule } from '../plano-card/plano-card.module';
     DividerModule,
     TableModule,
     ButtonModule,
-//    CheckboxModule,
     CommonModule,
-//    FormsModule,    
     MenuModule,
     DialogModule,
     InputTextModule,
     PlanoCardModule,
-
+    ToastModule
   ]
 })
 export class TelaPlanosModule { }

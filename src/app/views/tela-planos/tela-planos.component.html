@@ -18,24 +18,22 @@
                         <div>
                             <label htmlFor="celular">Plano</label>
                             <input pInputText id="celular" />
-
                         </div>
                     </div>
                     <div class="InputHorario">
                         <div>
                             <label htmlFor="redeSocial">Valor</label>
                             <input pInputText id="redeSocial" />
-
                         </div>
                     </div>
-
                     <div class="botaoSalvar">
-                        <p-button styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
+                        <p-toast position="bottom-center" key="bc"></p-toast>
+                        <p-button (click)="salvarAluno()" styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
                     </div>
                 </p-dialog>
-
-
                 <div>
                 </div>
             </div>
         </div>
+    </div>
+</div>

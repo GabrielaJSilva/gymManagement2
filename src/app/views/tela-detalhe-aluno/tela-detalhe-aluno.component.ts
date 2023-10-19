@@ -2,26 +2,29 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Student } from 'src/app/resources/domain/student';
 import { AlunosService } from 'src/app/resources/services/alunosservice';
-
+import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-detalhe-aluno',
   templateUrl: './tela-detalhe-aluno.component.html',
-  styleUrls: ['./tela-detalhe-aluno.component.scss']
+  styleUrls: ['./tela-detalhe-aluno.component.scss'],
+  providers: [MessageService]
 })
 
 export class TelaDetalheAlunoComponent implements OnInit{
-
 
   idAluno!: number
   student !: Student
   visible: boolean = false;
 
-
-  deletarAluno() {
+  dialogDeletarA() {
     this.visible = true;
   }
-  constructor(private router : ActivatedRoute, private alunoService : AlunosService){}
+  deletarAluno(){
+    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Aluno deletado com sucesso' });
+  }
+  constructor(private router : ActivatedRoute, private alunoService : AlunosService,
+    private messageService: MessageService){}
 
   ngOnInit(){
    this.router.params.subscribe((objeto: any) => {

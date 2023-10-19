@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 import { DialogModule } from 'primeng/dialog';
 import { TelaDetalheAlunoComponent } from './tela-detalhe-aluno.component';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [TelaDetalheAlunoComponent],
@@ -17,7 +18,8 @@ import { TelaDetalheAlunoComponent } from './tela-detalhe-aluno.component';
   imports: [
     CommonModule, MenuModule,
     TieredMenuModule, FormsModule, CardModule,
-    DividerModule, ButtonModule,DialogModule
+    DividerModule, ButtonModule,DialogModule,
+    ToastModule
   ]
 })
 export class TelaDetalheModule { }

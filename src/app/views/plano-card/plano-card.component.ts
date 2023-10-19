@@ -12,10 +12,8 @@ import { Observable } from 'rxjs';
 })
 export class PlanoCardComponent implements OnInit {
   plans?: Plan[];
-  //selectedPlano!: Plano;
   visible: boolean = false;
   visible2: boolean = false;
-  //public addPlano: AddPlano | undefined;
   dialogDeletarPlano(): void {
     this.visible2 = true;
   }
@@ -37,7 +35,7 @@ export class PlanoCardComponent implements OnInit {
       key: 'bc',
       severity: 'success',
       summary: 'Successo',
-      detail: 'Professor deletado com sucesso',
+      detail: 'Plano deletado com sucesso',
       sticky: true,
     });
   }
