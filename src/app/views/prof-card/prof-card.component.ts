@@ -49,7 +49,7 @@ export class ProfCardComponent implements OnInit {
     this.messageService.add({
       key: 'bc',
       severity: 'success',
-      summary: 'Successo',
+      summary: 'Sucesso',
       detail: 'Professor deletado com sucesso',
       sticky: true,
     });

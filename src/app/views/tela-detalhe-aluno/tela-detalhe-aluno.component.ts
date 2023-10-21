@@ -12,7 +12,7 @@ import { MessageService } from 'primeng/api';
 })
 
 export class TelaDetalheAlunoComponent implements OnInit{
-
+  //private router: Router
   idAluno!: number
   student !: Student
   visible: boolean = false;
@@ -22,6 +22,8 @@ export class TelaDetalheAlunoComponent implements OnInit{
   }
   deletarAluno(){
     this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Aluno deletado com sucesso' });
+    //detelar aqui o aluno no backend e retornar para o dashboard
+    ///this.router.navigate(['dashboard']);
   }
   constructor(private router : ActivatedRoute, private alunoService : AlunosService,
     private messageService: MessageService){}

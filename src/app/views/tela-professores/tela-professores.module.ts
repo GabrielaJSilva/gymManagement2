@@ -12,6 +12,7 @@ import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [TelaProfessoresComponent],
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     DialogModule,
     InputTextModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastModule
   ]
 
 })

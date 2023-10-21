@@ -34,7 +34,7 @@ export class PlanoCardComponent implements OnInit {
     this.messageService.add({
       key: 'bc',
       severity: 'success',
-      summary: 'Successo',
+      summary: 'Sucesso',
       detail: 'Plano deletado com sucesso',
       sticky: true,
     });

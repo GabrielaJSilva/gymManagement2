@@ -11,9 +11,10 @@ export class TelaPlanosComponent implements OnInit {
   visible: boolean = false;
   cadastrarPlano(){
     this.visible = true;
+
   }
   salvarAluno(){
-    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Success', detail: 'Plano adicionado com sucesso' });
+    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Sucesso', detail: 'Plano adicionado com sucesso' });
 
   }
   constructor(private messageService: MessageService

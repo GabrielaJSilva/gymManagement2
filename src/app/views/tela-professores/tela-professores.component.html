@@ -37,8 +37,9 @@
                             </div>
                         </div>
                         <div class="botaoSalvar">
-                            <p-button type="submit" styleClass="p-button-rounded p-button-warning" label="Salvar"
-                                name="salvar"> </p-button>
+                            <p-toast position="bottom-center" key="bc"></p-toast>
+                            <p-button (click)="salvarProfessor()" styleClass="p-button-rounded p-button-warning" label="Salvar">
+                           </p-button>
                         </div>
                     </form>
                 </p-dialog>
