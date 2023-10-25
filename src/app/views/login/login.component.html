@@ -13,6 +13,7 @@
                 </div>
                 <div class="InputEmail">
                     <input 
+                    id="emailI"
                     style="border: none" 
                     [(ngModel)]="requestLogin.login" 
                     type="text" 
@@ -20,7 +21,9 @@
                     placeholder="e-mail"/> 
                 </div>
                 <div class="InputSenha">
-                    <input style="border: none" 
+                    <input 
+                    id="senhaI"
+                    style="border: none" 
                     [(ngModel)]="requestLogin.password" 
                     type="password" 
                     pInputText  
@@ -28,6 +31,7 @@
                 </div>
                 <div class="botao">
                     <p-button 
+                    id="entrarB"
                     (click)="doLogin()" 
                     styleClass="p-button-rounded p-button-warning" 
                     label="Entrar"> </p-button>  

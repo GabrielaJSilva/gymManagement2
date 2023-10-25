@@ -1,67 +1,48 @@
 <div class="titulo">
     <h3>Alunos</h3>
     <div class="cardBase">
-     <p-table
-     [value] = students
-     [paginator]="true"
-     [rows]="10"
-     [showCurrentPageReport]="true"
-     [tableStyle]="{'min-width': '50rem'}"
-     styleClass="myTable"
-     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
-     [rowsPerPageOptions]="[10, 20, 50]">
+        <p-table [value]=students [paginator]="true" [rows]="10" [showCurrentPageReport]="true"
+            [tableStyle]="{'min-width': '50rem'}" styleClass="myTable"
+            currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+            [rowsPerPageOptions]="[10, 20, 50]">
 
-     <ng-template pTemplate="header">
-
-            <div class="searchEdeletar">
-                <div class="inputSearch">
-                    <span class="p-input-icon-left">
-                        <i class="pi pi-search"></i>
-                        <input type="text" class="p-inputtext-sm" pInputText [(ngModel)]="value1" placeholder="Procurar aluno"/>
-                    </span>
+            <ng-template pTemplate="header">
+                <div class="search">
+                    <div class="inputSearch">
+                        <span class="p-input-icon-left">
+                            <i class="pi pi-search"></i>
+                            <input type="text" class="p-inputtext-sm" pInputText [(ngModel)]="value1"
+                                placeholder="Procurar aluno" />
+                        </span>
+                    </div>
                 </div>
-                <!-- <div class="botaoDeletar">
-                    <p-button (onClick)="deletarAluno()" styleClass="p-button-danger" label="Deletar"></p-button>
-                </div> -->
-            </div>
-            <tr >
-                <th style="width: 1rem">
-                    <!-- <p-tableHeaderCheckbox></p-tableHeaderCheckbox> -->
-                </th>
-                <th>Matrícula</th>
-                <th>Nome</th>
-                <th>Plano</th>
-                <th>Situação</th>
-                <th>Status de Pagamento</th>
-            </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-students>
+                <tr>
+                    <th style="width: 1rem">
+                    </th>
+                    <th>Matrícula</th>
+                    <th>Nome</th>
+                    <th>Plano</th>
+                    <th>Situação</th>
+                    <th>Status de Pagamento</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-students>
+                <tr (click)="abrirDetalheAluno(students.id)">
+                    <td class="linhacheckbox">
+                    </td>
+                    <td>{{ students.id }}</td>
+                    <td>{{ students.name }}</td>
+                    <td>{{ students.plan.namePlan }}</td>
+                    <td>{{ students.situation }}</td>
+                    <td>{{ students.paymentStatus }}</td>
+                </tr>
 
-            <tr (click)="abrirDetalheAluno(students.id)">
-               <td class="linhacheckbox">
-                    <!-- <p-tableCheckbox [value]="students" ></p-tableCheckbox> -->
-                </td>
-                <td>{{ students.id }}</td>
-                <td>{{ students.name }}</td>
-                <td>{{ students.plan.namePlan }}</td>
-                <td>{{ students.situation }}</td>
-                <td>{{ students.paymentStatus }}</td>
-            </tr>
-
-        </ng-template>
-        <ng-template pTemplate="paginatorleft">
-        </ng-template>
-        <ng-template pTemplate="paginatorright">
-        </ng-template>
-     </p-table>
-     <!-- <p-dialog header="Deletar Aluno" [(visible)]="visible" [style]="{width: '28vw', height:'15vw'}">
-        <p>
-            Deseja deletar os alunos selecionados?
-        </p>
-        <div class="botaoConfirmar">
-            <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Confirmar"> </p-button>
-        </div>
-    </p-dialog> -->
+            </ng-template>
+            <ng-template pTemplate="paginatorleft">
+            </ng-template>
+            <ng-template pTemplate="paginatorright">
+            </ng-template>
+        </p-table>
     </div>
 
 </div>
