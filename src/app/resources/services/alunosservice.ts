@@ -20,7 +20,11 @@ export class AlunosService {
 
   findById(id : number) : Observable<Student> {
 
+<<<<<<< HEAD
     return this.http.get<Student>(environment.production ? environment.backend + "student/by-id?id=" +id: "api/student/by-id?id="+id)
+=======
+    return this.http.get<Student>("api/student/by-id?id="+id)
+>>>>>>> f0c8fbcb51326c4fb086ff63aa89baeb1b18451a
   }
 
 };
