@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backend: "https://manangment-gym-production.up.railway.app/"
+  backend: "https://gym-management2-fjmn.vercel.app/"
 };
