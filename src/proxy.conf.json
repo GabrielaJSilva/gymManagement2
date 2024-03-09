@@ -1,6 +1,6 @@
 {
     "/api/*": {
-      "target": "https://gym-success.onrender.com/",
+      "target": "https://manangment-gym-production.up.railway.app/",
       "secure": false,
      "changeOrigin": true,
     "pathRewrite": {
