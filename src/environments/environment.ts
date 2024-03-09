@@ -1,4 +1,4 @@
 export const environment = {
-  production: true,
+  production: false,
   backend: "https://manangment-gym-production.up.railway.app/"
 };

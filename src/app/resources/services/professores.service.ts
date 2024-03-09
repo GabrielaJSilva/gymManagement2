@@ -3,6 +3,7 @@ import { AddProfessor } from '../models/AddProfessor';
 import { HttpClient } from '@angular/common/http';
 import { Professores } from '../domain/professores';
 import { Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -17,7 +18,7 @@ export class ProfessoresService {
   }
 
   public getAllTeachers() : Observable<Professores[]>{
-    return this.httpClient.get<Professores[]>('api/teacher');
+    return this.httpClient.get<Professores[]>(environment.production ? environment.backend + 'teacher' : 'api/teacher');
   }
 
   public deletProfessorById(id: number){

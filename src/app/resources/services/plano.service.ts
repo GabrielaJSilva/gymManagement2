@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Plan } from '../domain/Plan';
 
 @Injectable({
@@ -12,7 +13,7 @@ export class PlanoService {
 
 
   public getAllPlans() : Observable<Plan[]>{
-    return this.http.get<Plan[]>('api/plan');
+    return this.http.get<Plan[]>(environment.production ? environment.backend + 'plan' : 'api/plan');
   }
 
   public deletePlanById(id : number){
@@ -20,5 +21,3 @@ export class PlanoService {
   }
 
   }
-
-

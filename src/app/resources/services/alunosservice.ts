@@ -11,7 +11,7 @@ export class AlunosService {
    }
 
   getAllStudent() : Observable<Student[]> {
-       return this.http.get<Student[]>('api/student');
+       return this.http.get<Student[]>(environment.production ? environment.backend + 'student' : 'api/student');
   }
 
   createAluno(student : Student) {
