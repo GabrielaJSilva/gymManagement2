@@ -17,7 +17,7 @@ export class PlanoService {
   }
 
   public deletePlanById(id : number){
-    return this.http.delete('api/plan?id'+id)
+    return this.http.delete<any>(environment.production ? environment.backend + 'plan?id='+id : 'api/plan?id'+id);
   }
 
   }

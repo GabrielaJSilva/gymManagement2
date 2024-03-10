@@ -11,26 +11,35 @@ import { Observable } from 'rxjs';
   providers: [MessageService],
 })
 export class PlanoCardComponent implements OnInit {
-  plans?: Plan[];
+  //[x: string]: Object;
+  plans!: Plan[];
+  selectedPlan!: Plan;
   visible: boolean = false;
   visible2: boolean = false;
-  dialogDeletarPlano(): void {
+  observa: Object | undefined;
+  //observa: Object | undefined;
+
+  //observa?: Observable<any>;
+
+
+  dialogDeletarPlano(){
     this.visible2 = true;
   }
   constructor(
     private service: PlanoService,
     private messageService: MessageService
-
     ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.service.getAllPlans().subscribe((resposta) => (this.plans = resposta));
   }
 
   public deletePlan(id: number) {
     console.log("Chegou aqui Component"+id)
-    this.service.deletePlanById(id);
-
+    this.service
+    .deletePlanById(id)
+    .subscribe((resposta) => (this.observa = resposta));
+    //console.log('Olha o retorno tem httpStatusCode' + this['observa']);
     this.messageService.add({
       key: 'bc',
       severity: 'success',

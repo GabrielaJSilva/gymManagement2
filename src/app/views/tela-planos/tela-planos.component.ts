@@ -15,11 +15,9 @@ export class TelaPlanosComponent implements OnInit {
   }
   salvarAluno(){
     this.messageService.add({ key: 'bc', severity: 'success', summary: 'Sucesso', detail: 'Plano adicionado com sucesso' });
-
   }
   constructor(private messageService: MessageService
     ) {}
   ngOnInit() {} 
-  //Não esquecer de iniciar o metodo get professor
-  //this.getProfessores();
+
 }

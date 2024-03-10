@@ -39,7 +39,7 @@ export class ProfCardComponent implements OnInit {
   }
 
   public exluirProf(id: number) {
-    console.log("Chegou aqui,.,,")
+    //console.log("Chegou aqui,.,,"+id)
     this.professoresService
       .deletProfessorById(id)
       .subscribe((resposta) => (this.observa = resposta));
