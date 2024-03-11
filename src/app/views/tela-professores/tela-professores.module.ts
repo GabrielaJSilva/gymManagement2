@@ -13,6 +13,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastModule } from 'primeng/toast';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TelaProfessoresComponent],
@@ -30,7 +31,8 @@ import { ToastModule } from 'primeng/toast';
     InputTextModule,
     FormsModule,
     HttpClientModule,
-    ToastModule
+    ToastModule,
+    ReactiveFormsModule
   ]
 
 })

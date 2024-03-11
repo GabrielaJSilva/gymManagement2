@@ -1,8 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Professores } from 'src/app/resources/domain/professores';
-import { AddProfessor } from 'src/app/resources/models/AddProfessor';
-import { ProfessoresService } from 'src/app/resources/services/professores.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
+import { ProfessoresService } from 'src/app/resources/services/professores.service';
 @Component({
   selector: 'app-tela-professores',
   templateUrl: './tela-professores.component.html',
@@ -11,11 +10,10 @@ import { MessageService } from 'primeng/api';
   providers: [MessageService]
 })
 export class TelaProfessoresComponent implements OnInit {
+
   visible: boolean = false;
   visible1: boolean = false;
-  professores!: Professores[];
-  selectedProfessor!: Professores;
-  public addProfessor: AddProfessor = new AddProfessor();
+  form!: FormGroup;
 
   cadastrarProf() {
     this.visible = true;
@@ -23,17 +21,20 @@ export class TelaProfessoresComponent implements OnInit {
   deletarProf() {
     this.visible1 = true;
   }
-  salvarProfessor(){
-    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Sucesso', detail: 'Professor adicionado com sucesso' });
-  }
-  constructor(private professoresService: ProfessoresService, private messageService: MessageService) {}
-  ngOnInit(): void {
-    this.addProfessor = new AddProfessor();
-  }
 
-  public doProf() {
-    this.professoresService
-      .addProfessor(this.addProfessor)
-      .subscribe((resposta) => (this.addProfessor = resposta));
+  constructor(private professoresService: ProfessoresService, private messageService: MessageService,
+    private fb: FormBuilder) {}
+  ngOnInit() {
+    this.form = this.fb.group({
+      name: [null, [Validators.required, Validators.minLength(3)]],
+    });
+  }
+  salvarProfessor(){
+    console.log(this.form.value);
+    if(this.form.valid){ 
+      console.log('submit');
+      this.professoresService.addNewProfessor(this.form.value).subscribe();
+    }
+    this.messageService.add({ key: 'bc', severity: 'success', summary: 'Sucesso', detail: 'Professor adicionado com sucesso'});
   }
 }

@@ -11,6 +11,7 @@ import { DialogModule } from 'primeng/dialog';
 import { InputTextModule } from 'primeng/inputtext';
 import { PlanoCardModule } from '../plano-card/plano-card.module';
 import { ToastModule } from 'primeng/toast';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ TelaPlanosComponent ],
@@ -26,7 +27,8 @@ import { ToastModule } from 'primeng/toast';
     DialogModule,
     InputTextModule,
     PlanoCardModule,
-    ToastModule
+    ToastModule,
+    ReactiveFormsModule
   ]
 })
 export class TelaPlanosModule { }

@@ -14,24 +14,27 @@
 
                 </ng-container>
                 <p-dialog header="Cadastrar Professor" [(visible)]="visible" [style]="{width: '28vw', height:'36vw' }">
-                    <form #professorForm="ngForm" (ngSubmit)="doProf()">
                         <div class="InputNome">
                             <div>
-                                <label htmlFor="username">Nome</label>
-                                <input [(ngModel)]="addProfessor.name" pInputText id="username" name="username" />
+                                <form class="needs-validation" novalidate [formGroup]="form">
+                                    <label htmlFor="username">Nome</label>
+                                    <input 
+                                        class= "form-control" 
+                                        pInputText id="nameProfessor" 
+                                        formControlName="nameProfessor"
+                                    />
+                                </form>
                             </div>
                         </div>
                         <div class="InputCelular">
                             <div>
                                 <label htmlFor="celular">Celular</label>
-                                <input [(ngModel)]="addProfessor.numberPhone" pInputText id="celular" name="celular" />
 
                             </div>
                         </div>
                         <div class="InputRedeSocial">
                             <div>
                                 <label htmlFor="redeSocial">Rede Social</label>
-                                <input [(ngModel)]="addProfessor.socialNetwork" pInputText id="redeSocial"
                                     name="redeSocial" />
 
                             </div>
@@ -41,7 +44,7 @@
                             <p-button (click)="salvarProfessor()" styleClass="p-button-rounded p-button-warning" label="Salvar">
                            </p-button>
                         </div>
-                    </form>
+                   
                 </p-dialog>
             </div>
         </div>

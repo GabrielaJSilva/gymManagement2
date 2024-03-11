@@ -13,22 +13,30 @@
                     <app-plano-card class="plano-container"></app-plano-card>
                 </ng-container>
                 <p-dialog header="Cadastrar Plano" [(visible)]="visible" [style]="{width: '28vw', height:'30vw'}">
-
                     <div class="InputPlano">
                         <div>
-                            <label htmlFor="celular">Plano</label>
-                            <input pInputText id="celular" />
+                            <form class="needs-validation" novalidate [formGroup]="form">
+                                <label htmlFor="plano">Plano</label>
+                                <input 
+                                    class= "form-control" 
+                                    pInputText id="namePlan" 
+                                    formControlName="namePlan"
+                                    />
+                                
+                            </form>
                         </div>
                     </div>
                     <div class="InputHorario">
                         <div>
-                            <label htmlFor="redeSocial">Valor</label>
-                            <input pInputText id="redeSocial" />
+                            <form class="needs-validadtion" novalidate [formGroup]="form">
+                                <label htmlFor="valor">Valor</label>
+                                <input class= "form-control" pInputText id="valor" formControlName="valuePlan" />
+                            </form>
                         </div>
                     </div>
                     <div class="botaoSalvar">
                         <p-toast position="bottom-center" key="bc"></p-toast>
-                        <p-button (click)="salvarAluno()" styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
+                        <p-button (click)="salvarPlano()" styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
                     </div>
                 </p-dialog>
                 <div>
