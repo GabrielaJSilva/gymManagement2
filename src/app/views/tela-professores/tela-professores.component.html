@@ -20,23 +20,34 @@
                                     <label htmlFor="username">Nome</label>
                                     <input 
                                         class= "form-control" 
-                                        pInputText id="nameProfessor" 
-                                        formControlName="nameProfessor"
+                                        pInputText id="name" 
+                                        formControlName="name"
+                                    />
+                                </form>
+                            </div>
+                        </div>
+                        <div class="InputRedeSocial">
+                            <div>
+                                <form class="needs-validation" novalidate [formGroup]="form">
+                                    <label htmlFor="redeSocial">Rede Social</label>
+                                    <input 
+                                        class= "form-control" 
+                                        pInputText id="socialNetwork" 
+                                        formControlName="socialNetwork"
                                     />
                                 </form>
                             </div>
                         </div>
                         <div class="InputCelular">
                             <div>
-                                <label htmlFor="celular">Celular</label>
-
-                            </div>
-                        </div>
-                        <div class="InputRedeSocial">
-                            <div>
-                                <label htmlFor="redeSocial">Rede Social</label>
-                                    name="redeSocial" />
-
+                                <form class="needs-validation" novalidate [formGroup]="form">
+                                    <label htmlFor="celular">Celular</label>
+                                    <input 
+                                        class= "form-control" 
+                                        pInputText id="numberPhone" 
+                                        formControlName="numberPhone"
+                                    />
+                                </form>
                             </div>
                         </div>
                         <div class="botaoSalvar">
@@ -44,7 +55,6 @@
                             <p-button (click)="salvarProfessor()" styleClass="p-button-rounded p-button-warning" label="Salvar">
                            </p-button>
                         </div>
-                   
                 </p-dialog>
             </div>
         </div>

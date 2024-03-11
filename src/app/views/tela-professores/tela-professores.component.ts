@@ -27,6 +27,9 @@ export class TelaProfessoresComponent implements OnInit {
   ngOnInit() {
     this.form = this.fb.group({
       name: [null, [Validators.required, Validators.minLength(3)]],
+      socialNetwork: [null, [Validators.required, Validators.minLength(3)]],
+      numberPhone: [null, [Validators.required, Validators.minLength(3)]],
+
     });
   }
   salvarProfessor(){

@@ -1,6 +1,5 @@
 export class AddProfessor {
     public name!: string;
-    public socialNetwork: string | undefined;
-    public numberPhone: number | undefined;
-
+    public socialNetwork!: string;
+    public numberPhone!: number;
 }

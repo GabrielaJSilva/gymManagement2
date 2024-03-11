@@ -19,14 +19,8 @@ export class ProfessoresService {
     return this.http.delete<any>(environment.production ? environment.backend + 'teacher?id='+id : 'api/teacher?id='+id).pipe(tap(response =>
       response))
   }
-
   public addNewProfessor(addProfessor : AddProfessor){
     return this.http.post(environment.production ? environment.backend + 'teacher' : 'api/teacher',addProfessor);
     }
-      // public addProfessor(addProfessor: AddProfessor) : Observable<AddProfessor>{
-  //   console.log("passou no service")
-  //   return this.httpClient.post<AddProfessor>('api/teacher', addProfessor);
-  //   //return this.httpClient.post<AddProfessor>(environment.production ? environment.backend + 'teacher' :'api/teacher', addProfessor);
-
-  // }
+      
 }

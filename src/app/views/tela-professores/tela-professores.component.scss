@@ -36,7 +36,6 @@ $font-sizeMenu: 16px;
 .base-container{
     display: flex;
     position: relative;
-    //float: left;
     height: 100%;
     width: 1000px;
     background-color: rgb(0, 0, 0);
@@ -117,10 +116,8 @@ $font-sizeMenu: 16px;
     margin-left: 2em;
     margin-top: 0;
     height: 100%;
-
 }
 .profCard {
-    //display: flex;
     .p-card-body{
         background-color: rgba(255, 255, 255, 0) !important;
         border: solid;
@@ -157,7 +154,6 @@ $font-sizeMenu: 16px;
     margin-top: 3em;
 }
 .deletarDialog{
-    //z-index: 999999;
     position: absolute;
     opacity: none;
     z-index: 9999 !important;
