@@ -8,6 +8,7 @@ import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { MenuModule } from 'src/app/views/menu/menu.module';
 import { InputTextModule } from 'primeng/inputtext';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TelaCadastroComponent],
@@ -19,9 +20,10 @@ import { InputTextModule } from 'primeng/inputtext';
     TableModule,
     ButtonModule,
     CommonModule,
- //   FormsModule,    
+ //   FormsModule,
     MenuModule,
-    InputTextModule
+    InputTextModule,
+    ReactiveFormsModule
   ]
 })
 export class TelaCadastroModule { }
