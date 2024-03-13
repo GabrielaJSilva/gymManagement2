@@ -1,15 +1,12 @@
 import { Contacts } from './../../resources/domain/contacts';
 import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { AlertService } from 'src/app/resources/services/alert.service';
-import { LoginService } from 'src/app/resources/services/login.service';
 import { Alunos } from 'src/app/resources/domain/alunos';
-import { AlunosService } from 'src/app/resources/services/alunosservice';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TelaCadastroServiceService } from 'src/app/resources/services/tela-cadastro-service.service';
 import { MessageService } from 'primeng/api';
 import { Student } from 'src/app/resources/domain/student';
-import { StudentInputDTO } from '../../resources/models/StudentInputDTO';
+
 
 
 @Component({
@@ -29,39 +26,42 @@ export class TelaCadastroComponent implements OnInit{
   student!: Student;
   contact!: Contacts
 
-
-
   constructor(
     private messageService: MessageService,
-    private loginService: LoginService,
-    private alertService: AlertService,
-    private alunosService: AlunosService,
     private fb: FormBuilder,
     private service: TelaCadastroServiceService
     ) {}
-  ngOnInit() {
-    this.form = this.fb.group({
-      name: [null, [Validators.required, Validators.minLength(3)]],
-      sexo: [null, [Validators.required, Validators.minLength(3)]],
-      socialNetwork: [null, [Validators.required, Validators.minLength(3)]],
-      numberPhone: [null, [Validators.required, Validators.minLength(3)]],
-      email: [null, [Validators.required, Validators.minLength(3)]]
 
 
-
-
-    });
-  }
+    ngOnInit() {
+      this.form = this.fb.group({
+        student: this.fb.group({
+          name: [null, [Validators.required, Validators.minLength(3)]],
+          sexo: [null, [Validators.required, Validators.minLength(3)]]
+        }),
+        contact: this.fb.group({
+          socialNetwork: [null, [Validators.required, Validators.minLength(3)]],
+          numberPhone: [null, [Validators.required, Validators.minLength(3)]],
+          email: [null, [Validators.required, Validators.minLength(3)]]
+        })
+      });
+    }
 
   saveStudent(){
 
-    console.log("Value do form *******"+this.form.value);
-    if(this.form.valid){
-      console.log('submit');
-      console.log("ALUNOOOOOOOOO######  "+this.form.value);
-      this.service.createStudent(this.form.value);
+    if(this.form.value){
 
-    }
+      const formData = this.form.value;
+      const student = formData.student;
+      const contact = formData.contact;
+
+      student.contact = contact;
+      console.log("Student no component "+student.name)
+      console.log("Student no component "+student.sexo)
+
+      console.log("Form Data "+formData.student)
+      this.service.createStudent(student);
+   }
     this.messageService.add({ key: 'bc', severity: 'success', summary: 'Sucesso', detail: 'Student adicionado com sucesso' });
   }
 

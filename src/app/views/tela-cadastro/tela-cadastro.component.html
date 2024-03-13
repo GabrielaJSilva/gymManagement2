@@ -14,52 +14,14 @@
 
             <div class="linha">
                 <div class="inputAluno">
-                    <label htmlFor="name">Nome: <span class="red">*</span></label>
-                    <input pInputText class="form-control" id="name" formControlName="name" />
+                    <label htmlFor="username">Nome: <span class="red">*</span></label>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
                 <div class="inputAluno">
-                  <label htmlFor="username">Sexo:</label>
-                  <input pInputText class="p-inputtext-sm" id="username" formControlName="sexo"  />
+                    <label htmlFor="username">Plano: <span class="red">*</span> </label>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
             </div>
-            <div >
-            <div class="linha">
-              <p style="margin: 1px;"></p>
-              <div class="inputAlunob">
-                  <label htmlFor="socialNetwork">Rede Social: <span class="red">*</span></label>
-                  <input pInputText class="form-control" id="socialNetwork" formControlName="socialNetwork" />
-              </div>
-              <div class="inputAlunob">
-                <label htmlFor="numberPhone">Celular:</label>
-                <input pInputText class="p-inputtext-sm" id="numberPhone" formControlName="numberPhone"  />
-              </div>
-              <div class="inputAlunob">
-                <label htmlFor="email">E-mail:</label>
-                <input pInputText class="p-inputtext-sm" id="email" formControlName="email"  />
-              </div>
-          </div>
-          </div>
-
-            <!--<div class="linha">
-                <div class="inputAluno">
-                    <label htmlFor="username">Sexo:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" formControlName="sexo"  />
-                </div>
-                <div class="inputAluno">
-                    <label htmlFor="username">Telefone:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help" formControlName="numberPhone" />
-                </div>
-            </div>
-            <div class="linha">
-                <div class="inputAluno">
-                    <label htmlFor="username">Data de nascimento:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help" formControlName="birthDate" />
-                </div>
-                <div class="inputAluno">
-                    <label htmlFor="username">Email: <span class="red">*</span> </label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help" formControlName="sexo" />
-                </div>
-            </div>-->
          </div>
          <div class="cardBaseAf">
             <p style="margin: 15px;">Avaliação Física:</p>
@@ -93,13 +55,8 @@
                     <label htmlFor="username">Peitoral:</label>
                     <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  formControlName="shoulder"/>
                 </div>
-         </div>
-
-     </div>
-     <div class="botaoSalvar">
-      <p-toast position="bottom-center" key="bc"></p-toast>
-      <p-button (click)="saveStudent()" styleClass="p-button-rounded p-button-warning" label="Salvar"> </p-button>
-    </div>
+            </div>
+          </div>
     </form>
  </div>
 </div>
