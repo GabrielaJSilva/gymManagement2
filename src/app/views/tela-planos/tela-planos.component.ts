@@ -10,25 +10,25 @@ import { PlanoService } from 'src/app/resources/services/plano.service';
   providers: [MessageService]
 })
 export class TelaPlanosComponent implements OnInit {
-  
+
   visible: boolean = false;
   form!: FormGroup;
-  
+
   cadastrarPlano(){
     this.visible = true;
   }
- 
+
   constructor(private messageService: MessageService,
     private fb: FormBuilder, private service: PlanoService ) {}
 
-  ngOnInit() { 
+  ngOnInit() {
     this.form = this.fb.group({
       namePlan: [null, [Validators.required, Validators.minLength(3)]],
       valuePlan: [null, [Validators.required, Validators.minLength(3)]]
     });
   }
   salvarPlano(){
-    console.log(this.form.value);
+    console.log("O value do form *** "+this.form.value);
     if(this.form.valid){
       console.log('submit');
       this.service.addNewPlan(this.form.value).subscribe();
