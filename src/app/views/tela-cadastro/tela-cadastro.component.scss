@@ -73,6 +73,17 @@ $font-sizeMenu: 16px;
         border-radius: 15px;
     }
 }
+.inputAlunob{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3em;
+    
+    .p-inputtext {
+        width: 285px;
+        height: 30px;
+        border-radius: 15px;
+    }
+}
 .red{
     color: red
 }

@@ -3,10 +3,10 @@
  <div class="base-container">
      <div class="titulo">
          <h3> Cadastro de Aluno
-            <div class="botaoSalvarA">
+            <!-- <div class="botaoSalvarA">
                 <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Salvar">
                 </p-button>
-            </div>
+            </div> -->
          </h3>
          <form class="needs-validadtion" novalidate [formGroup]="form">
          <div class="cardBaseDp">
@@ -22,18 +22,18 @@
                   <input pInputText class="p-inputtext-sm" id="username" formControlName="sexo"  />
                 </div>
             </div>
-            <div class="cardBaseDp">
+            <div >
             <div class="linha">
-              <p style="margin: 15px;">Dados de Contato:</p>
-              <div class="inputAluno">
+              <p style="margin: 1px;"></p>
+              <div class="inputAlunob">
                   <label htmlFor="socialNetwork">Rede Social: <span class="red">*</span></label>
                   <input pInputText class="form-control" id="socialNetwork" formControlName="socialNetwork" />
               </div>
-              <div class="inputAluno">
+              <div class="inputAlunob">
                 <label htmlFor="numberPhone">Celular:</label>
                 <input pInputText class="p-inputtext-sm" id="numberPhone" formControlName="numberPhone"  />
               </div>
-              <div class="inputAluno">
+              <div class="inputAlunob">
                 <label htmlFor="email">E-mail:</label>
                 <input pInputText class="p-inputtext-sm" id="email" formControlName="email"  />
               </div>
