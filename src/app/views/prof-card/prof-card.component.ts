@@ -23,8 +23,13 @@ export class ProfCardComponent implements OnInit {
   observa?: Observable<any>;
 
   //dialog para deletar professor visível
-  dialogDeletarProf() {
-    this.visible = true;
+  dialogDeletarProf(id : number) { 
+    console.log(id)
+    // this.visible = false;
+     const idSelected = id-1; 
+     if (idSelected != id ){
+      this.visible = true ;
+    }
   }
 
   constructor(

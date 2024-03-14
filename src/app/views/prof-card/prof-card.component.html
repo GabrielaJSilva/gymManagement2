@@ -2,13 +2,13 @@
     <div>
         <div class="deleteButton">
             <span>
-                <p-button (click)="dialogDeletarProf()" icon="pi pi-times"
+                <p-button (click)="dialogDeletarProf(professor.id!)" icon="pi pi-times"
                     styleClass="p-button-rounded p-button-danger"></p-button>
             </span>
         </div>
         <h5> {{ professor.name }}</h5>
         <h5> {{ professor.numberPhone }}</h5>
-        <h5>{{ professor.socialNetwork }}</h5>
+        <h5> {{ professor.socialNetwork }}</h5>
     </div>
     <p-dialog class="deletarDialog" header="Deletar Professor" [(visible)]="visible"
         [style]="{width: '25vw', height:'20vw' }">

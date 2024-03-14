@@ -1,24 +1,39 @@
 <div class="container">
-    <app-menu> </app-menu>
- <div class="base-container">
+    <app-menu> </app-menu>  
+ <div class="base-container"> 
      <div class="titulo">
-         <h3> Cadastro de Aluno
-            <!-- <div class="botaoSalvarA">
+         <h3> Cadastro de Aluno 
+            <div class="botaoSalvarA">
                 <p-button styleClass="p-button-rounded p-button-warning p-button-sm" label="Salvar">
                 </p-button>
-            </div> -->
+            </div>
          </h3>
-         <form class="needs-validadtion" novalidate [formGroup]="form">
          <div class="cardBaseDp">
             <p style="margin: 15px;">Dados Pessoais:</p>
-
             <div class="linha">
                 <div class="inputAluno">
                     <label htmlFor="username">Nome: <span class="red">*</span></label>
                     <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
                 <div class="inputAluno">
-                    <label htmlFor="username">Plano: <span class="red">*</span> </label>
+                    <label htmlFor="username">Sexo: <span class="red">*</span> </label>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
+                </div>
+            </div>
+            
+            <div class="linha">
+                <div class="inputAluno">
+                    <label htmlFor="username">Rede Social:</label>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
+                </div>
+                <div class="inputAluno">
+                    <label htmlFor="username">Celular:</label>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
+                </div>
+            </div>
+            <div class="linha">
+                <div class="inputAluno">
+                    <label htmlFor="username">Email:</label>
                     <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
             </div>
@@ -28,35 +43,34 @@
             <div class="linha">
                 <div class="inputAluno">
                     <label htmlFor="username">Peso:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  formControlName="weight"/>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
                 <div class="inputAluno">
                     <label htmlFor="username">Ombros:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  formControlName="breastplate"/>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
             </div>
-
+            
             <div class="linha">
                 <div class="inputAluno">
                     <label htmlFor="username">Altura:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  formControlName="height"/>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
                 <div class="inputAluno">
                     <label htmlFor="username">Cintura:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  formControlName="waist"/>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
             </div>
             <div class="linha">
                 <div class="inputAluno">
                     <label htmlFor="username">Bíceps:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  formControlName="biceps"/>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
                 <div class="inputAluno">
                     <label htmlFor="username">Peitoral:</label>
-                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  formControlName="shoulder"/>
+                    <input pInputText class="p-inputtext-sm" id="username" aria-describedby="username-help"  />
                 </div>
-            </div>
-          </div>
-    </form>
+         </div>
+     </div>
  </div>
 </div>
