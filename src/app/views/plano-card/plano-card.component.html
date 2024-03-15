@@ -2,7 +2,7 @@
   <div>
     <div class="deleteButtonPlano">
       <span>
-        <p-button (click)="dialogDeletarPlano()" icon="pi pi-times"
+        <p-button (click)="dialogDeletarPlano(plan.id!)" icon="pi pi-times"
           styleClass="p-button-rounded p-button-danger"></p-button>
       </span>
     </div>
@@ -16,7 +16,7 @@
         </div>
         <div>
             <p-toast class="toastP" position="bottom-center" key="bc"></p-toast>
-            <p-button pRipple (click)="deletePlan( plan.id!)" class="botaoConfirmar"
+            <p-button pRipple (click)="deletePlan()" class="botaoConfirmar"
                 styleClass="p-button-rounded p-button-warning" label="Confirmar">
             </p-button>
         </div>

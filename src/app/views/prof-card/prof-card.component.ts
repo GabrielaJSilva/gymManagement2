@@ -19,19 +19,18 @@ export class ProfCardComponent implements OnInit {
   visible: boolean = false;
   visible1: boolean = false;
   public addProfessor: AddProfessor | undefined;
-
   observa?: Observable<any>;
+  idSelected: number | undefined;
 
   //dialog para deletar professor visível
   dialogDeletarProf(id : number) { 
     console.log(id)
-    // this.visible = false;
-     const idSelected = id-1; 
-     if (idSelected != id ){
-      this.visible = true ;
-    }
+    this.idSelected = id;
+    console.log('valor do id = '+this.idSelected)
+    this.visible = true;
+    
   }
-
+  
   constructor(
     private professoresService: ProfessoresService,
     private messageService: MessageService
@@ -43,10 +42,10 @@ export class ProfCardComponent implements OnInit {
       .subscribe((resposta) => (this.professores = resposta));
   }
 
-  public exluirProf(id: number) {
-    //console.log("Chegou aqui,.,,"+id)
+  public exluirProf(id = this.idSelected) {
+    console.log("Chegou aqui,.,,"+id)
     this.professoresService
-      .deletProfessorById(id)
+      .deletProfessorById(id!)
       .subscribe((resposta) => (this.observa = resposta));
 
     console.log('Olha o retorno tem httpStatusCode' + this.observa);

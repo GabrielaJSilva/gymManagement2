@@ -16,9 +16,12 @@ export class PlanoCardComponent implements OnInit {
   visible: boolean = false;
   visible2: boolean = false;
   observa: Object | undefined;
+  idSelected: number | undefined;
 
-  dialogDeletarPlano(){
-    this.visible2 = true;
+  dialogDeletarPlano(id : number){
+    console.log(id)
+    this.idSelected = id;
+    this.visible2 = true;  
   }
   constructor(
     private service: PlanoService,
@@ -30,11 +33,12 @@ export class PlanoCardComponent implements OnInit {
   
   }
 
-  public deletePlan(id: number) {
+  public deletePlan(id = this.idSelected) {
+    console.log("chegou aqui" +id)
     this.service
-    .deletePlanById(id)
+    .deletePlanById(id!)
     .subscribe((resposta) => (this.observa = resposta));
-    // this.service.getAllPlans();
+    
     this.messageService.add({
       key: 'bc',
       severity: 'success',
@@ -42,6 +46,7 @@ export class PlanoCardComponent implements OnInit {
       detail: 'Plano deletado com sucesso',
       sticky: true,
     });
+//    this.service.getAllPlans().subscribe((resposta) => (this.plans = resposta));
     
   }
 }
