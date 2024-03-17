@@ -16,12 +16,15 @@ export class TelaAlunosComponent {
   visible: boolean = false;
   value1: string | undefined;
   student!: Student;
+  msgTranslated!: String;
 
   constructor(private service: AlunosService, private router: Router) {}
   ngOnInit() {
     this.service
       .getAllStudent()
       .subscribe((resposta) => (this.students = resposta));
+
+
   }
 
   abrirDetalheAluno(id: number) {
@@ -33,4 +36,20 @@ export class TelaAlunosComponent {
       .findById(id)
       .subscribe((resposta) => (this.student = resposta));
   }
+
+
+  public translatePaymentStatus(paymentStatus: string): string {
+    let msgTranslated: string;
+
+    if (paymentStatus === "IN_DAY") {
+        msgTranslated = "EM DIA";
+    } else if (paymentStatus === "LATE") {
+        msgTranslated = "EM ATRASO";
+    } else {
+        msgTranslated = "A VENCER";
+    }
+
+    return msgTranslated;
+}
+
 }
