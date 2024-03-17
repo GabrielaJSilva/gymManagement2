@@ -37,7 +37,9 @@
                     <td>{{ students.name }}</td>
                     <td>{{ students.plan?.namePlan }}</td>
                     <td>{{ students.situation }}</td>
-                    <td>{{ students.paymentStatus }}</td>
+                    <td *ngIf="students.paymentStatus === 'IN_DAY'">EM DIA</td>
+                    <td *ngIf="students.paymentStatus === 'LATE'">EM ATRASO</td>
+                    <td *ngIf="students.paymentStatus !== 'IN_DAY' && students.paymentStatus !== 'LATE'">A VENCER</td>
                 </tr>
 
             </ng-template>
