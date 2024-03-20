@@ -14,13 +14,28 @@ export class PlanoService {
 
 
   public getAllPlans() : Observable<Plan[]>{
-    return this.http.get<Plan[]>(environment.production ? environment.backend + 'plan' : 'api/plan');
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+    const headers = {
+          'Authorization': 'Bearer '+token.access_token
+      }
+    return this.http.get<Plan[]>(environment.production ? environment.backend + 'plan' : 'api/plan', { headers });
   }
 
   public deletePlanById(id : number){
-    return this.http.delete<any>(environment.production ? environment.backend + 'plan?id='+id : 'api/plan?id'+id);
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+    const headers = {
+          'Authorization': 'Bearer '+token.access_token
+      }
+    return this.http.delete<any>(environment.production ? environment.backend + 'plan?id='+id : 'api/plan?id'+id, { headers });
   }
   public addNewPlan(addPlan : AddPlan){
-  return this.http.post(environment.production ? environment.backend + 'plan' : 'api/plan',addPlan);
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+    const headers = {
+          'Authorization': 'Bearer '+token.access_token
+      }
+  return this.http.post(environment.production ? environment.backend + 'plan' : 'api/plan',addPlan, { headers });
   }
   }
