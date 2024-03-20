@@ -1,4 +1,4 @@
 export class RequestLogin {
-    public login!: string;
-    public password!: StringConstructor;
+    public username!: string;
+    public password!: string;
 }
