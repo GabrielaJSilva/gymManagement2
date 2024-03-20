@@ -9,7 +9,7 @@ import { LoginService } from 'src/app/resources/services/login.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   public requestLogin!: RequestLogin;
 
   constructor(
@@ -18,18 +18,38 @@ export class LoginComponent implements OnInit {
     private router: Router,
     ) {}
 
-  ngOnInit(): void {
-    this.requestLogin = new RequestLogin();
-  }
-public doLogin(): void{
-  this.loginService.doLogin(this.requestLogin).subscribe(
-    (data) => {
-    this.router.navigate(['dashboard'])
+    username!: string;
+    password!: string;
 
-    },
-    () => {
-      this.router.navigate(['dashboard'])
+
+onSubmit(){
+console.log(`User : ${this.username}, Pass: ${this.password}`)
+this.requestLogin = new RequestLogin();
+this.requestLogin.username =  this.username;
+this.requestLogin.password = this.password;
+
+this.loginService.doLogin(this.requestLogin).subscribe(response => {
+console.log("REtorno TOKEN "+response)
+  this.router.navigate(['dashboard'])
+}, errorResponse => {
+  console.log("Erro ao logar")
+})
+
+
+}
+
+ // ngOnInit(): void {
+    //this.requestLogin = new RequestLogin();
+ // }
+public doLogin(): void{
+ // this.loginService.doLogin(this.requestLogin).subscribe(
+    //(data) => {
+    //this.router.navigate(['dashboard'])
+
+   // },
+   // () => {
+    //  this.router.navigate(['dashboard'])
     //this.alertService.error('', httperror.error.message);
-  });
+  //});
 }
 }

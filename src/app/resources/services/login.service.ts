@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RequestLogin } from '../models/RequestLogin';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { ResponseLogin } from '../models/ResponseLogin';
 import { AuthService } from './auth.service';
@@ -12,11 +12,24 @@ export class LoginService {
 
   constructor(private httpClient: HttpClient, private authService: AuthService) { }
 
-  public doLogin(requestLogin: RequestLogin): Observable<ResponseLogin>{
-    return this.httpClient.post<ResponseLogin>
-    ('http://localhost:8080/api/login', 
-    requestLogin
-    ).pipe(
-      tap((loginResponse) => (this.authService.loginResponse = loginResponse)));
+  public doLogin(requestLogin: RequestLogin){
+    console.log("SERVICE ")
+    const params = new HttpParams()
+                  .set('username', requestLogin.username)
+                  .set('password', requestLogin.password)
+                  .set('grant_type', 'password')
+                  console.log("PARAMETROS "+params.toString)
+
+  const headers = {
+                'Authorization': 'Basic ' + btoa('gym-managment-app:@321'),
+                'Content-Type' : 'application/x-www-form-urlencoded',
+                'Accept': '*/*',
+                'Access-Control-Allow-Origin': 'http://localhost:8080',
+                'Access-Control-Allow-Headers': 'Origin, X-Requested-With'
+                }
+
+                console.log("HEARDER "+ headers.Authorization+ "  "+headers['Content-Type'] )
+
+    return this.httpClient.post<any>('https://manangment-gym-production.up.railway.app/oauth/token', params, { headers });
   }
 }
