@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation  } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { PlanoService } from 'src/app/resources/services/plano.service';
-//import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-tela-planos',
   templateUrl: './tela-planos.component.html',
@@ -14,7 +14,7 @@ export class TelaPlanosComponent implements OnInit {
 
   visible: boolean = false;
   form!: FormGroup;
-  //private router!: Router;
+
   cadastrarPlano(){
     this.visible = true;
   }
@@ -35,6 +35,6 @@ export class TelaPlanosComponent implements OnInit {
       this.service.addNewPlan(this.form.value).subscribe();
     }
     this.messageService.add({ key: 'bc', severity: 'success', summary: 'Sucesso', detail: 'Plano adicionado com sucesso' });
-    //this.router.navigateByUrl('dashboard/tela-planos');
+
   }
 }

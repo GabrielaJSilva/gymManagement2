@@ -18,6 +18,7 @@ import { AlunosService } from './resources/services/alunosservice';
 //import { TelaDetalheAlunoComponent } from './views/tela-detalhe-aluno/tela-detalhe-aluno.component';
 import { MenuModule } from "./views/menu/menu.module";
 //import { MenuModule_1 as MenuModule } from "./views/menu/menu.module";
+import { DialogModule } from 'primeng/dialog';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { MenuModule } from "./views/menu/menu.module";
         AppRoutingModule,
         TableModule,
         CommonModule,
-        MenuModule
+        MenuModule,
+        DialogModule
     ]
 })
 export class AppModule { }

@@ -11,6 +11,7 @@ import { LoginService } from 'src/app/resources/services/login.service';
 })
 export class LoginComponent {
   public requestLogin!: RequestLogin;
+  visible: boolean = false;
 
   constructor(
     private loginService: LoginService,
@@ -34,24 +35,12 @@ console.log("ACCES "+access_token)
 localStorage.setItem('access_token', access_token)
   this.router.navigate(['dashboard'])
 }, errorResponse => {
-  console.log("Erro ao logar")
+  console.log("Erro ao logar");
+  this.visible = true;
 })
-
-
 }
 
- // ngOnInit(): void {
-    //this.requestLogin = new RequestLogin();
- // }
-public doLogin(): void{
- // this.loginService.doLogin(this.requestLogin).subscribe(
-    //(data) => {
-    //this.router.navigate(['dashboard'])
-
-   // },
-   // () => {
-    //  this.router.navigate(['dashboard'])
-    //this.alertService.error('', httperror.error.message);
-  //});
+fecharDialog(){
+  this.visible = false;
 }
 }

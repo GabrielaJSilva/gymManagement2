@@ -39,13 +39,12 @@
                   <p-button type="submit" styleClass="p-button-rounded p-button-warning" label="Entrar"></p-button>
                   </div>
               </form>
-                <!--<div class="botao">
-                    <p-button
-                    id="entrarB"
-                    (click)="doLogin()"
-                    styleClass="p-button-rounded p-button-warning"
-                    label="Entrar"> </p-button>
-                </div>-->
+              <p-dialog header="Usuário ou senha inválidos. Por favor, tente novamente" [(visible)]="visible" [style]="{width: '28vw', height:'10vw'}">
+                <div class="botaoSalvar">
+                   
+                    <p-button  (click)="fecharDialog()" styleClass="p-button-rounded p-button-warning" label="OK"> </p-button>
+                </div>
+            </p-dialog>
             </div>
         </p-card>
     </div>
