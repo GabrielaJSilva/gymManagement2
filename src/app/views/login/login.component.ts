@@ -29,7 +29,9 @@ this.requestLogin.username =  this.username;
 this.requestLogin.password = this.password;
 
 this.loginService.doLogin(this.requestLogin).subscribe(response => {
-console.log("REtorno TOKEN "+response)
+const access_token =  JSON.stringify(response);
+console.log("ACCES "+access_token)
+localStorage.setItem('access_token', access_token)
   this.router.navigate(['dashboard'])
 }, errorResponse => {
   console.log("Erro ao logar")

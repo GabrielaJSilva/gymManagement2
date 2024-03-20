@@ -23,9 +23,7 @@ export class LoginService {
   const headers = {
                 'Authorization': 'Basic ' + btoa('gym-managment-app:@321'),
                 'Content-Type' : 'application/x-www-form-urlencoded',
-                'Accept': '*/*',
-                'Access-Control-Allow-Origin': 'http://localhost:8080',
-                'Access-Control-Allow-Headers': 'Origin, X-Requested-With'
+                'Accept': '*/*'
                 }
 
                 console.log("HEARDER "+ headers.Authorization+ "  "+headers['Content-Type'] )

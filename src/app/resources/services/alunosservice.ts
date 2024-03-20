@@ -11,15 +11,31 @@ export class AlunosService {
    }
 
   getAllStudent() : Observable<Student[]> {
-       return this.http.get<Student[]>(environment.production ? environment.backend + 'student' : 'api/student');
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+const headers = {
+  'Authorization': 'Bearer '+token.access_token
+}
+
+    return this.http.get<Student[]>(environment.production ? environment.backend + 'student' : 'api/student', { headers } );
   }
 
   createAluno(student : Student) {
-    return this.http.post('api/student', student)
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+const headers = {
+  'Authorization': 'Bearer '+token.access_token
+}
+    return this.http.post('api/student', student, { headers })
   }
 
   findById(id : number) : Observable<Student> {
-    return this.http.get<Student>(environment.production ? environment.backend + "student/by-id?id="+id : "api/student/by-id?id="+id)
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+    const headers = {
+          'Authorization': 'Bearer '+token.access_token
+      }
+    return this.http.get<Student>(environment.production ? environment.backend + "student/by-id?id="+id : "api/student/by-id?id="+id, { headers })
   }
 
 };

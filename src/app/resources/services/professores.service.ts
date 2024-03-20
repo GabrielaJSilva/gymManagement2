@@ -13,14 +13,29 @@ export class ProfessoresService {
   constructor(private http: HttpClient) {}
 
   public getAllTeachers() : Observable<Professores[]>{
-    return this.http.get<Professores[]>(environment.production ? environment.backend + 'teacher' : 'api/teacher');
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+    const headers = {
+          'Authorization': 'Bearer '+token.access_token
+      }
+    return this.http.get<Professores[]>(environment.production ? environment.backend + 'teacher' : 'api/teacher', { headers });
   }
   public deletProfessorById(id: number){
-    return this.http.delete<any>(environment.production ? environment.backend + 'teacher?id='+id : 'api/teacher?id='+id).pipe(tap(response =>
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+    const headers = {
+          'Authorization': 'Bearer '+token.access_token
+      }
+    return this.http.delete<any>(environment.production ? environment.backend + 'teacher?id='+id : 'api/teacher?id='+id, { headers }).pipe(tap(response =>
       response))
   }
   public addNewProfessor(addProfessor : AddProfessor){
-    return this.http.post(environment.production ? environment.backend + 'teacher' : 'api/teacher',addProfessor);
+    const tokenString = localStorage.getItem('access_token') || '{}'
+    const token = JSON.parse(tokenString)
+    const headers = {
+          'Authorization': 'Bearer '+token.access_token
+      }
+    return this.http.post(environment.production ? environment.backend + 'teacher' : 'api/teacher',addProfessor, { headers });
     }
-      
+
 }
